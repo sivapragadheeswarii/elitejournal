@@ -46,7 +46,7 @@ const Navbar = ({ onOpenEnquiry }) => {
           
           {/* Brand Logo */}
           <Link to="/" className="flex items-center gap-2.5 sm:gap-3.5 group shrink-0 min-w-0">
-            <img src={logo} alt="Elite Market Academy Logo" className="w-10 h-10 sm:w-12 sm:h-12 object-contain group-hover:scale-105 transition-transform shrink-0" />
+            <img src={logo} alt="Elite Market Academy Logo" className="w-10 h-10 sm:w-12 sm:h-12 object-contain group-hover:scale-105 transition-transform shrink-0 drop-shadow-sm" />
             <div className="flex flex-col text-left min-w-0">
               <span className="text-base sm:text-xl font-black text-[#0B192C] tracking-tight font-heading flex items-center gap-1 leading-tight">
                 ELITE MARKET <span className="text-amber-600">ACADEMY</span>
