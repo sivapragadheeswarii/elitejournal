@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { BookOpen, ShieldCheck, Menu, X, ChevronRight, PhoneCall } from 'lucide-react';
+import { ShieldCheck, Menu, X, ChevronRight, PhoneCall } from 'lucide-react';
 import { BRAND } from '../../data/emaData';
+import logo from '../../assets/logo.png';
 
 const Navbar = ({ onOpenEnquiry }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -45,8 +46,8 @@ const Navbar = ({ onOpenEnquiry }) => {
           
           {/* Brand Logo */}
           <Link to="/" className="flex items-center gap-2.5 sm:gap-3.5 group shrink-0 min-w-0">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#0B192C] text-amber-400 border border-amber-500/30 flex items-center justify-center shadow-md group-hover:scale-105 transition-transform shrink-0">
-              <BookOpen className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#0B192C] border border-amber-500/30 flex items-center justify-center shadow-md group-hover:scale-105 transition-transform shrink-0 overflow-hidden p-1">
+              <img src={logo} alt="Elite Market Academy Logo" className="w-full h-full object-contain" />
             </div>
             <div className="flex flex-col text-left min-w-0">
               <span className="text-base sm:text-xl font-black text-[#0B192C] tracking-tight font-heading flex items-center gap-1 leading-tight">
