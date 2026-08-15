@@ -15,9 +15,7 @@ const Footer = () => {
           {/* Brand Info (Cols 1-2) */}
           <div className="lg:col-span-2 flex flex-col gap-5">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-slate-800 border border-amber-500/30 flex items-center justify-center overflow-hidden p-1">
-                <img src={logo} alt="Elite Market Academy Logo" className="w-full h-full object-contain" />
-              </div>
+              <img src={logo} alt="Elite Market Academy Logo" className="w-10 h-10 object-contain shrink-0" />
               <div className="flex flex-col">
                 <span className="text-lg font-black text-white font-heading">
                   ELITE MARKET <span className="text-amber-400">ACADEMY</span>
