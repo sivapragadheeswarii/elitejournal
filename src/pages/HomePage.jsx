@@ -508,25 +508,25 @@ const HomePage = ({ onOpenEnquiry }) => {
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 text-left">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-6 text-left">
             {WHO_CAN_JOIN.map((p, i) => (
               <ScrollReveal key={i} animation="fade-up" delay={i * 100}>
-                <div className="relative p-3.5 sm:p-6 rounded-xl sm:rounded-2xl dark-trading-card border border-slate-800 shadow-md flex flex-col justify-between gap-3 hover:border-amber-400/60 transition-all duration-300 group h-full overflow-hidden">
+                <div className="relative p-4 sm:p-6 rounded-2xl dark-trading-card border border-slate-800 shadow-md flex flex-col justify-between gap-3.5 hover:border-amber-400/60 transition-all duration-300 group h-full overflow-hidden">
                   
                   {/* Card Header: 01 badge & Arrow Icon */}
                   <div className="flex items-center justify-between">
-                    <span className="w-7 h-7 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl bg-amber-500/10 text-amber-400 font-black text-[11px] sm:text-xs font-mono flex items-center justify-center shrink-0 border border-amber-500/30">
+                    <span className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-amber-500/10 text-amber-400 font-black text-xs font-mono flex items-center justify-center shrink-0 border border-amber-500/30">
                       0{i + 1}
                     </span>
-                    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg sm:rounded-xl bg-slate-900 text-slate-400 border border-slate-800 flex items-center justify-center group-hover:bg-amber-500 group-hover:text-slate-950 group-hover:border-amber-400 transition-all duration-300 shadow-2xs">
-                      <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-slate-900 text-slate-400 border border-slate-800 flex items-center justify-center group-hover:bg-amber-500 group-hover:text-slate-950 group-hover:border-amber-400 transition-all duration-300 shadow-2xs">
+                      <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </div>
                   </div>
 
                   {/* Title & Desc */}
-                  <div className="flex flex-col gap-1 sm:gap-2">
-                    <h3 className="text-xs sm:text-lg font-black text-white font-heading leading-snug group-hover:text-amber-400 transition-colors">{p.title}</h3>
-                    <p className="text-[11px] sm:text-xs text-slate-300 font-medium leading-relaxed">{p.desc}</p>
+                  <div className="flex flex-col gap-1.5 sm:gap-2">
+                    <h3 className="text-sm sm:text-lg font-black text-white font-heading leading-snug group-hover:text-amber-400 transition-colors">{p.title}</h3>
+                    <p className="text-xs text-slate-300 font-medium leading-relaxed">{p.desc}</p>
                   </div>
 
                   {/* Hover Accent Line */}
@@ -554,27 +554,27 @@ const HomePage = ({ onOpenEnquiry }) => {
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 text-left">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-6 text-left">
             {WHY_EMA_PILLARS.map((p, i) => (
               <ScrollReveal key={i} animation="fade-up" delay={i * 100}>
-                <div className="relative p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-gradient-to-b from-white via-slate-50/50 to-slate-100/60 border border-slate-200/90 shadow-2xs hover:shadow-xl hover:border-amber-400/60 transition-all duration-300 group flex flex-col justify-between gap-3 h-full overflow-hidden">
+                <div className="relative p-4 sm:p-6 rounded-2xl bg-gradient-to-b from-white via-slate-50/50 to-slate-100/60 border border-slate-200/90 shadow-2xs hover:shadow-xl hover:border-amber-400/60 transition-all duration-300 group flex flex-col justify-between gap-3.5 h-full overflow-hidden">
                   
                   {/* Top Header Row: 01 Pill & Arrow Icon Button */}
                   <div className="flex items-center justify-between">
-                    <span className="px-2.5 py-1 rounded-xl bg-[#0B192C] text-amber-400 text-xs sm:text-sm font-black font-mono border border-slate-800 shadow-xs">
+                    <span className="px-3 py-1 rounded-xl bg-[#0B192C] text-amber-400 text-xs sm:text-sm font-black font-mono border border-slate-800 shadow-xs">
                       {p.number}
                     </span>
-                    <div className="w-7 h-7 sm:w-9 sm:h-9 rounded-xl bg-amber-500/10 text-amber-600 border border-amber-200/80 flex items-center justify-center group-hover:bg-amber-500 group-hover:text-slate-950 group-hover:border-amber-400 transition-all duration-300 shadow-2xs">
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-amber-500/10 text-amber-600 border border-amber-200/80 flex items-center justify-center group-hover:bg-amber-500 group-hover:text-slate-950 group-hover:border-amber-400 transition-all duration-300 shadow-2xs">
                       <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </div>
                   </div>
 
                   {/* Title & Description */}
-                  <div className="flex flex-col gap-1 sm:gap-2">
-                    <h3 className="text-xs sm:text-lg font-black text-[#0B192C] font-heading group-hover:text-amber-600 transition-colors leading-snug">
+                  <div className="flex flex-col gap-1.5 sm:gap-2">
+                    <h3 className="text-sm sm:text-lg font-black text-[#0B192C] font-heading group-hover:text-amber-600 transition-colors leading-snug">
                       {p.title}
                     </h3>
-                    <p className="text-[11px] sm:text-xs text-slate-600 leading-relaxed font-medium">
+                    <p className="text-xs text-slate-600 leading-relaxed font-medium">
                       {p.description}
                     </p>
                   </div>
