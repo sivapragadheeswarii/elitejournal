@@ -239,32 +239,32 @@ const FoundersNoteSection = ({ showPhoto = true, theme = 'light', sec1Theme, sec
               </span>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5 sm:gap-4">
+            <div className="grid grid-cols-2 lg:grid-cols-5 gap-2.5 sm:gap-4">
               {philosophySteps.map((item, idx) => {
                 const IconComp = item.icon;
                 return (
                   <ScrollReveal key={item.step} animation="fade-up" delay={idx * 100}>
-                    <div className={`p-4 sm:p-5 rounded-2xl border flex flex-col gap-2.5 sm:gap-3 group transition-all h-full ${
+                    <div className={`p-3 sm:p-5 rounded-xl sm:rounded-2xl border flex flex-col gap-2 sm:gap-3 group transition-all h-full ${
                       isDarkSec2
                         ? 'bg-slate-900/90 border-slate-800 hover:border-amber-400 shadow-lg hover:shadow-amber-500/10 text-white'
                         : 'bg-[#F8FAFC] border-slate-200/90 hover:border-amber-400/80 shadow-sm text-slate-900'
                     }`}>
                       <div className="flex items-center justify-between">
-                        <span className={`text-xs font-black font-mono ${
+                        <span className={`text-[11px] sm:text-xs font-black font-mono ${
                           isDarkSec2 ? 'text-amber-400' : 'text-amber-700'
                         }`}>{item.step}</span>
-                        <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-lg flex items-center justify-center border ${
+                        <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-lg flex items-center justify-center border ${
                           isDarkSec2
                             ? 'bg-amber-500/10 text-amber-400 border-amber-500/30'
                             : 'bg-amber-50 text-amber-700 border-amber-200'
                         }`}>
-                          <IconComp className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                          <IconComp className="w-3 h-3 sm:w-4 sm:h-4" />
                         </div>
                       </div>
-                      <h4 className={`text-xs sm:text-sm font-black font-heading transition-colors ${
+                      <h4 className={`text-xs sm:text-sm font-black font-heading transition-colors leading-snug ${
                         isDarkSec2 ? 'text-white group-hover:text-amber-400' : 'text-[#0B192C] group-hover:text-amber-700'
                       }`}>{item.title}</h4>
-                      <p className={`text-xs font-medium leading-relaxed ${
+                      <p className={`text-[10.5px] sm:text-xs font-medium leading-normal sm:leading-relaxed ${
                         isDarkSec2 ? 'text-slate-300' : 'text-slate-600'
                       }`}>{item.desc}</p>
                     </div>
