@@ -608,24 +608,24 @@ const HomePage = ({ onOpenEnquiry }) => {
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-7 text-left">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7 text-left">
             {COURSES.map((course, idx) => (
               <ScrollReveal key={course.id} animation="fade-up" delay={idx * 100}>
-                <div className="p-5 sm:p-7 rounded-2xl sm:rounded-3xl dark-trading-card border border-slate-800 shadow-xl hover:border-amber-400/50 transition-all flex flex-col justify-between gap-5 sm:gap-6 group h-full">
-                  <div className="flex flex-col gap-3.5 sm:gap-4">
+                <div className="p-4.5 sm:p-7 rounded-2xl sm:rounded-3xl dark-trading-card border border-slate-800 shadow-xl hover:border-amber-400/50 transition-all flex flex-col justify-between gap-4 sm:gap-6 group h-full">
+                  <div className="flex flex-col gap-3 sm:gap-4">
                     <div className="flex items-center justify-between">
-                      <span className="px-2.5 py-0.5 sm:px-3 sm:py-1 rounded bg-amber-500/10 text-amber-400 text-[9.5px] sm:text-[10px] font-black uppercase font-mono border border-amber-500/30">
+                      <span className="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-400 text-[10px] sm:text-[10px] font-black uppercase font-mono border border-amber-500/30 tracking-wider">
                         {course.level}
                       </span>
-                      <span className="text-xs text-slate-400 font-mono font-bold">{course.duration}</span>
+                      <span className="text-[11px] sm:text-xs text-slate-400 font-mono font-bold">{course.duration}</span>
                     </div>
-                    <h3 className="text-lg sm:text-xl font-black text-white font-heading group-hover:text-amber-400 transition-colors">{course.title}</h3>
+                    <h3 className="text-base sm:text-xl font-black text-white font-heading group-hover:text-amber-400 transition-colors leading-snug">{course.title}</h3>
                     <p className="text-xs text-slate-300 leading-relaxed font-medium">{course.shortDesc}</p>
                   </div>
 
                   <Link
                     to={`/courses/${course.slug}`}
-                    className="w-full py-2.5 sm:py-3 rounded-xl bg-slate-900 hover:bg-amber-500 hover:text-slate-950 text-amber-400 font-extrabold text-xs text-center transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md mt-2 sm:mt-4"
+                    className="w-full py-2.5 sm:py-3 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-amber-400/60 hover:bg-amber-500 hover:text-slate-950 text-amber-400 font-extrabold text-xs text-center transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md mt-1 sm:mt-4 active:scale-95"
                   >
                     <span>Explore Program</span>
                     <ChevronRight className="w-4 h-4" />
