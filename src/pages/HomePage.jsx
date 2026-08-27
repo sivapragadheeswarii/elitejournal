@@ -387,20 +387,20 @@ const HomePage = ({ onOpenEnquiry }) => {
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-7 text-left">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-7 text-left">
             {WHAT_YOU_WILL_LEARN_CATEGORIES.map((cat, idx) => (
               <ScrollReveal key={cat.id} animation="fade-up" delay={idx * 100}>
-                <div className="p-5 sm:p-7 rounded-2xl sm:rounded-3xl dark-trading-card border border-slate-800 shadow-xl hover:border-amber-400/50 transition-all flex flex-col justify-between gap-5 sm:gap-6 group h-full">
-                  <div className="flex flex-col gap-3.5 sm:gap-4">
+                <div className="p-3 sm:p-7 rounded-xl sm:rounded-3xl dark-trading-card border border-slate-800 shadow-xl hover:border-amber-400/50 transition-all flex flex-col justify-between gap-3 sm:gap-6 group h-full">
+                  <div className="flex flex-col gap-2 sm:gap-4">
                     <div className="flex items-center justify-between">
-                      <span className="px-2.5 py-0.5 sm:px-3 sm:py-1 rounded bg-amber-500/10 text-amber-400 text-[9.5px] sm:text-[10px] font-black uppercase font-mono border border-amber-500/30">
+                      <span className="px-2 py-0.5 sm:px-3 sm:py-1 rounded bg-amber-500/10 text-amber-400 text-[9.5px] sm:text-[10px] font-black uppercase font-mono border border-amber-500/30">
                         0{idx + 1}
                       </span>
-                      <BarChart2 className="w-4 h-4 text-amber-400 group-hover:rotate-12 transition-transform" />
+                      <BarChart2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400 group-hover:rotate-12 transition-transform shrink-0" />
                     </div>
                     
-                    <h3 className="text-lg sm:text-xl font-black text-white font-heading group-hover:text-amber-400 transition-colors">{cat.category}</h3>
-                    <p className="text-xs text-slate-300 font-medium leading-relaxed">{cat.description}</p>
+                    <h3 className="text-xs sm:text-xl font-black text-white font-heading group-hover:text-amber-400 transition-colors leading-snug">{cat.category}</h3>
+                    <p className="text-[10.5px] sm:text-xs text-slate-300 font-medium leading-normal sm:leading-relaxed">{cat.description}</p>
 
                     <ul className="hidden sm:flex flex-col gap-2 pt-3 sm:pt-4 border-t border-slate-800">
                       {cat.topics.map((t, ti) => (
@@ -414,10 +414,10 @@ const HomePage = ({ onOpenEnquiry }) => {
 
                   <Link
                     to="/courses"
-                    className="w-full py-2.5 sm:py-3 rounded-xl bg-slate-900 border border-slate-800 hover:bg-amber-500 hover:text-slate-950 text-amber-400 font-extrabold text-xs text-center transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md mt-2 sm:mt-4"
+                    className="w-full py-2 sm:py-3 rounded-xl bg-slate-900 border border-slate-800 hover:bg-amber-500 hover:text-slate-950 text-amber-400 font-extrabold text-[11px] sm:text-xs text-center transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-md mt-1 sm:mt-4 active:scale-95"
                   >
                     <span>Explore Curriculum</span>
-                    <ChevronRight className="w-4 h-4" />
+                    <ChevronRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
                   </Link>
                 </div>
               </ScrollReveal>
