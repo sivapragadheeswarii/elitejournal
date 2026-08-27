@@ -1,14 +1,33 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { LEARNING_HUB_ARTICLES } from '../data/emaData';
-import { ArrowLeft, CheckCircle2, AlertTriangle, HelpCircle, BookOpen } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, AlertTriangle, HelpCircle } from 'lucide-react';
+import SeoHead from '../components/common/SeoHead';
+import { getArticleSchema, getBreadcrumbSchema, getFaqSchema } from '../utils/seoSchemas';
 
 const ArticleDetailPage = () => {
   const { slug } = useParams();
   const article = LEARNING_HUB_ARTICLES.find((a) => a.slug === slug) || LEARNING_HUB_ARTICLES[0];
 
+  const articleJsonLd = [
+    getArticleSchema(article),
+    getBreadcrumbSchema([
+      { name: 'Home', url: '/' },
+      { name: 'Learning Hub', url: '/learning-hub' },
+      { name: article.title, url: `/learning-hub/${article.slug}` }
+    ]),
+    getFaqSchema(article.faqs)
+  ];
+
   return (
     <div className="py-16 bg-white min-h-screen">
+      <SeoHead
+        title={`${article.title} | Elite Market Academy`}
+        description={article.directAnswer}
+        keywords={`${article.title}, ${article.category}, learn stock market, Elite Market Academy`}
+        jsonLd={articleJsonLd}
+      />
+
       <div className="max-w-4xl mx-auto px-4 text-left flex flex-col gap-10">
         
         {/* Breadcrumb */}

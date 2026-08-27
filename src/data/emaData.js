@@ -3,13 +3,182 @@ export const BRAND = {
   shortName: 'EMA',
   tagline: 'Learn. Trade. Grow.',
   primaryMessage: 'Knowledge Before the Market.',
-  heroHeadline: 'Build Knowledge. Master the Market.',
-  heroCopy: 'Learn stock market concepts, technical analysis, options, risk management and trading psychology through structured financial-market education designed for beginners and aspiring traders.',
+  heroHeadline: 'Learn the Stock Market. Build Your Trading Skills. Trade with Discipline.',
+  heroCopy: 'Master technical analysis, market structure, and strict risk control through structured trading education.',
   supportStatement: 'Knowledge first. Discipline always.',
-  phone: '+91 98765 43210',
-  email: 'info@elitemarketacademy.com',
+  ctaPrimary: 'Start Learning',
+  ctaSecondary: 'Explore Our Programs',
+  credibilityStatement: 'Our goal is not to promise profits. Our goal is to help you develop the knowledge, discipline and risk-management skills required to make informed market decisions.',
+  phone: '+91 94438 79989',
+  email: 'support@elitemarketacademy.in',
   location: 'Chennai, Tamil Nadu, India',
 };
+
+export const WHAT_IS_EMA = {
+  title: 'What is Elite Market Academy?',
+  answer: 'Elite Market Academy is a stock market and trading education platform designed to help learners understand financial markets through structured, practical and responsible education.',
+  approach: 'Our approach focuses on building knowledge, analytical thinking, risk-management skills and trading discipline rather than promoting unrealistic profit expectations.',
+};
+
+export const WHAT_YOU_WILL_LEARN_CATEGORIES = [
+  {
+    id: 'stock-market-fundamentals',
+    category: 'Stock Market Fundamentals',
+    description: 'Master the foundational mechanics of public markets, exchanges, and instruments.',
+    topics: [
+      'How the stock market works',
+      'NSE & BSE exchanges',
+      'Equity and indices',
+      'Market participants',
+      'Orders and execution mechanics',
+    ],
+  },
+  {
+    id: 'technical-analysis',
+    category: 'Technical Analysis',
+    description: 'Learn how to interpret price action, charts, indicators, and market structure.',
+    topics: [
+      'Candlestick patterns',
+      'Support & resistance',
+      'Trend analysis',
+      'Exponential Moving Averages (EMA)',
+      'Relative Strength Index (RSI)',
+      'Price action principles',
+      'Chart patterns',
+    ],
+  },
+  {
+    id: 'derivatives',
+    category: 'Derivatives & Options',
+    description: 'Understand futures, options pricing, Greeks, and volatility mechanics.',
+    topics: [
+      'Futures contracts',
+      'Options (Calls & Puts)',
+      'Option chain analysis',
+      'Open Interest (OI)',
+      'Implied Volatility (IV)',
+      'Option Greeks (Delta, Theta, Vega)',
+    ],
+  },
+  {
+    id: 'risk-management',
+    category: 'Risk Management',
+    description: 'Protect your capital with rigorous position sizing, drawdown limits, and stop losses.',
+    topics: [
+      'Position sizing formulas',
+      'Stop loss strategies',
+      'Risk/reward ratios',
+      'Capital management',
+      'Drawdown management',
+    ],
+  },
+  {
+    id: 'trading-psychology',
+    category: 'Trading Psychology',
+    description: 'Develop emotional control, eliminate FOMO, and maintain disciplined habits.',
+    topics: [
+      'Trading discipline & routine',
+      'Emotional control',
+      'Overcoming fear & greed',
+      'Eliminating repeated trading mistakes',
+      'Maintaining a structured trading journal',
+    ],
+  },
+];
+
+export const WHO_CAN_JOIN = [
+  {
+    title: 'Beginners entering the stock market',
+    desc: 'Starting from scratch? Build your knowledge step-by-step from core market concepts.',
+  },
+  {
+    title: 'Students interested in financial markets',
+    desc: 'Develop a practical understanding of financial markets and technical analysis early on.',
+  },
+  {
+    title: 'Working professionals',
+    desc: 'Build market skills through structured online modules that fit into your busy schedule.',
+  },
+  {
+    title: 'Aspiring traders',
+    desc: 'Learn to read price charts objectively, structure trade plans, and manage downside risk.',
+  },
+  {
+    title: 'Investors wanting technical analysis',
+    desc: 'Enhance your entry/exit timing and portfolio timing using technical chart analysis.',
+  },
+  {
+    title: 'Traders looking for discipline',
+    desc: 'Tired of emotional trades? Master position sizing, risk control, and trading psychology.',
+  },
+];
+
+export const WHY_EMA_PILLARS = [
+  {
+    number: '01',
+    title: 'Structured Learning',
+    description: 'Learn concepts in a logical progression from fundamentals to advanced topics.',
+  },
+  {
+    number: '02',
+    title: 'Practical Understanding',
+    description: 'Connect theory with real-world market examples and practical scenarios.',
+  },
+  {
+    number: '03',
+    title: 'Risk Management',
+    description: 'Understand that protecting capital is as important as finding opportunities.',
+  },
+  {
+    number: '04',
+    title: 'Trading Psychology',
+    description: 'Develop discipline and control over emotional decision-making in live markets.',
+  },
+  {
+    number: '05',
+    title: 'Continuous Learning',
+    description: 'Markets evolve. Successful participants continue learning and adapting over time.',
+  },
+];
+
+export const AEO_FAQS = [
+  {
+    question: 'What is Elite Market Academy?',
+    answer: 'Elite Market Academy is a stock market and trading education platform designed to help learners understand financial markets through structured, practical and responsible education.',
+  },
+  {
+    question: 'Is Elite Market Academy suitable for beginners?',
+    answer: 'Yes. Elite Market Academy’s structured curriculum begins with foundational stock market concepts before progressing logically to advanced technical analysis, options, and risk management.',
+  },
+  {
+    question: 'What will I learn in a stock market course?',
+    answer: 'You will learn stock market fundamentals, candlestick chart reading, support and resistance, technical indicators (EMA, RSI), derivatives (futures & options), risk management, position sizing, and trading psychology.',
+  },
+  {
+    question: 'Does Elite Market Academy provide trading education?',
+    answer: 'Yes. Elite Market Academy provides practical, systematic stock market education designed to build analytical skills, risk management awareness, and trading discipline.',
+  },
+  {
+    question: 'Do I need previous stock market experience?',
+    answer: 'No. Our introductory modules start from zero and assume no prior background in finance or stock market trading.',
+  },
+  {
+    question: 'Does Elite Market Academy guarantee trading profits?',
+    answer: 'No. Elite Market Academy does NOT guarantee trading profits, returns, or 100% accurate calls. We do not sell stock tips or signals. Our goal is to provide structured education so you can make informed decisions and manage risk responsibly.',
+  },
+  {
+    question: 'What is technical analysis?',
+    answer: 'Technical analysis is the methodology of studying historical market price charts, price action, volume, and indicators to identify trends, momentum, and potential support/resistance zones.',
+  },
+  {
+    question: 'What is options trading?',
+    answer: 'Options trading involves derivative contracts (Calls and Puts) that give buyers the right to buy or sell an asset at a set price within a specified time. It requires understanding premiums, Greeks, implied volatility, and risk management.',
+  },
+  {
+    question: 'How can I learn stock market trading?',
+    answer: 'You can learn stock market trading by following a structured learning pathway: master market fundamentals, learn technical analysis, practice risk management rules, develop trading psychology, and review performance continuously.',
+  },
+];
 
 export const COURSES = [
   {
@@ -299,80 +468,12 @@ export const LEARNING_HUB_ARTICLES = [
   },
 ];
 
-export const AEO_FAQS = [
-  {
-    question: 'What is Elite Market Academy?',
-    answer: 'Elite Market Academy (EMA) is a professional financial-market education academy focused on stock market fundamentals, technical analysis, options education, trading psychology, and risk management.',
-  },
-  {
-    question: 'Is EMA suitable for beginners?',
-    answer: 'Yes. EMA’s learning structure begins with fundamental stock market concepts before progressing step-by-step to advanced technical and derivative concepts.',
-  },
-  {
-    question: 'Do I need previous trading experience?',
-    answer: 'No. Our foundational courses start from scratch, assuming zero prior market experience.',
-  },
-  {
-    question: 'Does EMA guarantee profits or provide stock tips?',
-    answer: 'No. EMA does NOT guarantee trading profits or provide stock tips, buy/sell recommendations, or advisory services. Financial markets carry inherent risk, and our sole mission is to provide structured education and risk awareness.',
-  },
-  {
-    question: 'Does EMA provide investment advice?',
-    answer: 'No. EMA educational content is intended strictly for learning and should not be treated as personalized investment advice or SEBI-registered advisory services.',
-  },
-  {
-    question: 'What courses does EMA offer?',
-    answer: 'EMA offers 6 core courses: Stock Market Fundamentals, Technical Analysis, Options Trading, Intraday Trading, Trading Psychology, and Risk Management.',
-  },
-  {
-    question: 'Can I learn stock market trading online?',
-    answer: 'Yes. Market concepts, chart reading, technical analysis, and risk models can be mastered through structured online modules, practical case studies, and continuous market observation.',
-  },
-  {
-    question: 'Is options trading risky?',
-    answer: 'Yes. Options derivatives involve significant financial risk and time decay. Understanding options mechanics, position sizing, and risk management is essential before participating.',
-  },
-];
-
-export const WHY_EMA_CARDS = [
-  {
-    number: '01',
-    title: 'Structured Learning',
-    description: 'Start with the fundamentals and progressively build your understanding of financial markets, technical analysis, trading concepts and risk management.',
-  },
-  {
-    number: '02',
-    title: 'Beginner-Friendly Education',
-    description: 'Complex market concepts are explained in a simple, structured and practical way so learners can build confidence step by step.',
-  },
-  {
-    number: '03',
-    title: 'Technical Analysis',
-    description: 'Understand charts, candlesticks, trends, support and resistance, indicators and market structure.',
-  },
-  {
-    number: '04',
-    title: 'Risk Management',
-    description: 'Learn why protecting capital, managing position size and understanding risk are essential parts of responsible market participation.',
-  },
-  {
-    number: '05',
-    title: 'Trading Psychology',
-    description: 'Develop discipline, patience and emotional awareness to understand how psychology can influence trading decisions.',
-  },
-  {
-    number: '06',
-    title: 'Continuous Learning',
-    description: 'Financial markets evolve continuously. Build a long-term learning mindset instead of depending on shortcuts or unrealistic promises.',
-  },
-];
-
 export const LEARNING_JOURNEY_STAGES = [
   { stage: 'STAGE 01', title: 'Market Fundamentals', description: 'Understand how financial markets work.' },
   { stage: 'STAGE 02', title: 'Technical Analysis', description: 'Learn how price and charts are analysed.' },
-  { stage: 'STAGE 03', title: 'Trading Concepts', description: 'Understand different approaches to market participation.' },
-  { stage: 'STAGE 04', title: 'Risk Management', description: 'Learn how risk can be identified and managed.' },
-  { stage: 'STAGE 05', title: 'Trading Psychology', description: 'Develop discipline and emotional awareness.' },
-  { stage: 'STAGE 06', title: 'Practical Market Learning', description: 'Apply concepts through examples, scenarios and market observation.' },
-  { stage: 'STAGE 07', title: 'Advanced Concepts', description: 'Continue developing your knowledge as your understanding grows.' },
+  { stage: 'STAGE 03', title: 'Derivatives & Options', description: 'Understand calls, puts, Greeks, and volatility mechanics.' },
+  { stage: 'STAGE 04', title: 'Risk Management', description: 'Learn how risk can be identified, calculated and managed.' },
+  { stage: 'STAGE 05', title: 'Trading Psychology', description: 'Develop discipline, patience and emotional awareness.' },
+  { stage: 'STAGE 06', title: 'Performance Tracking', description: 'Track, review and systematically improve trading decisions.' },
+  { stage: 'STAGE 07', title: 'Build Consistency', description: 'Develop a repeatable process for long-term market participation.' },
 ];

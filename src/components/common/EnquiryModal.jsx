@@ -4,6 +4,8 @@ import { COURSES } from '../../data/emaData';
 
 const EnquiryModal = ({ isOpen, onClose }) => {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState('');
   const [formData, setFormData] = useState({
     fullName: '',
     mobileNumber: '',
@@ -16,9 +18,28 @@ const EnquiryModal = ({ isOpen, onClose }) => {
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setErrorMsg('');
+    try {
+      const response = await fetch('http://localhost:5000/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      const data = await response.json();
+      if (data.success) {
+        setSubmitted(true);
+      } else {
+        setErrorMsg(data.message || 'Failed to send enquiry.');
+      }
+    } catch (err) {
+      console.error(err);
+      setErrorMsg('Failed to send enquiry. Please try again later.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -157,6 +178,12 @@ const EnquiryModal = ({ isOpen, onClose }) => {
                 />
               </div>
 
+              {errorMsg && (
+                <div className="p-3 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-xs font-semibold">
+                  {errorMsg}
+                </div>
+              )}
+
               <div className="pt-2 flex items-center justify-between gap-4">
                 <div className="flex items-center gap-1.5 text-[10.5px] text-slate-500 font-medium">
                   <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
@@ -165,9 +192,10 @@ const EnquiryModal = ({ isOpen, onClose }) => {
 
                 <button
                   type="submit"
-                  className="px-6 py-3 rounded-xl bg-[#0B192C] hover:bg-[#1E3A8A] text-amber-400 font-black text-xs transition-all shadow-md flex items-center gap-2 cursor-pointer border border-amber-500/30"
+                  disabled={loading}
+                  className={`px-6 py-3 rounded-xl bg-[#0B192C] hover:bg-[#1E3A8A] text-amber-400 font-black text-xs transition-all shadow-md flex items-center gap-2 cursor-pointer border border-amber-500/30 ${loading ? 'opacity-70 cursor-not-allowed' : ''}`}
                 >
-                  <span>Submit Request</span>
+                  <span>{loading ? 'Sending...' : 'Submit Request'}</span>
                   <Send className="w-3.5 h-3.5" />
                 </button>
               </div>

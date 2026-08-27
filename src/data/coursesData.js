@@ -1,6 +1,7 @@
 export const COURSES_DATA = [
   {
     id: 'course-1',
+    slug: 'institutional-price-action-masterclass',
     title: 'Institutional Price Action & Liquidity Masterclass',
     category: 'Smart Money Concepts',
     level: 'Masterclass',
@@ -23,6 +24,7 @@ export const COURSES_DATA = [
   },
   {
     id: 'course-2',
+    slug: 'complete-options-buying-strategy',
     title: 'Complete Options Buying & Hedging Strategy 2026',
     category: 'Options Trading',
     level: 'Intermediate',
@@ -44,6 +46,7 @@ export const COURSES_DATA = [
   },
   {
     id: 'course-3',
+    slug: 'risk-management-trader-psychology',
     title: 'Risk Management, Position Sizing & Trader Psychology',
     category: 'Risk & Psychology',
     level: 'Beginner to Advanced',
@@ -64,6 +67,7 @@ export const COURSES_DATA = [
   },
   {
     id: 'course-4',
+    slug: 'forex-crypto-scalping-blueprint',
     title: 'Advanced Forex & Crypto Scalping Blueprint',
     category: 'Forex & Crypto',
     level: 'Advanced',

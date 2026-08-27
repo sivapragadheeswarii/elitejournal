@@ -1,0 +1,13 @@
+# robots.txt for Elite Market Academy
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /admin/*
+Disallow: /dashboard
+Disallow: /dashboard/*
+Disallow: /login
+Disallow: /private/*
+
+# Host & Sitemap
+Host: https://elitemarketacademy.com
+Sitemap: https://elitemarketacademy.com/sitemap.xml
