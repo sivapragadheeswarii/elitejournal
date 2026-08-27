@@ -112,13 +112,13 @@ const Footer = () => {
 
         </div>
 
-        {/* Regulatory Legal Disclaimer Box (Compact on Mobile) */}
-        <div className="p-3.5 sm:p-5 rounded-xl sm:rounded-2xl bg-slate-900/90 border border-slate-800 text-slate-300 text-xs flex flex-col gap-2 sm:gap-2.5 leading-relaxed">
-          <div className="flex items-center gap-1.5 text-amber-400 font-extrabold uppercase text-[10px] sm:text-[11px] tracking-wider font-mono">
-            <ShieldAlert className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+        {/* Regulatory Legal Disclaimer Box (Desktop only to keep mobile footer clean) */}
+        <div className="hidden sm:flex p-5 rounded-2xl bg-slate-900/90 border border-slate-800 text-slate-300 text-xs flex-col gap-2.5 leading-relaxed">
+          <div className="flex items-center gap-1.5 text-amber-400 font-extrabold uppercase text-[11px] tracking-wider font-mono">
+            <ShieldAlert className="w-4 h-4 shrink-0" />
             <span>Important Financial Education Disclaimer</span>
           </div>
-          <p className="text-[10px] sm:text-xs text-slate-300 font-medium leading-normal sm:leading-relaxed">
+          <p className="text-xs text-slate-300 font-medium leading-relaxed">
             Elite Market Academy provides financial-market education for learning purposes only. Educational content should not be considered personalized investment advice, research advice or a recommendation to buy or sell any security. Trading and investing involve market risk, including the possible loss of capital.
           </p>
         </div>
