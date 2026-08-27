@@ -215,25 +215,25 @@ const HomePage = ({ onOpenEnquiry }) => {
                   {/* Scanning Grid Line */}
                   <div className="absolute inset-x-0 h-px bg-gradient-to-r from-transparent via-amber-400 to-transparent top-1/2 animate-shimmer" />
 
-                  {/* Glass Card Overlay 1 — Top Right Signal Badge */}
-                  <div className="absolute top-2.5 right-2.5 sm:top-4 sm:right-4 p-2 sm:p-3 rounded-xl sm:rounded-2xl bg-[#0B192C]/90 border border-amber-500/40 backdrop-blur-md shadow-xl flex items-center gap-2 animate-float-particle">
-                    <div className="w-5 h-5 sm:w-7 sm:h-7 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center border border-emerald-500/30 shrink-0">
-                      <TrendingUp className="w-3 h-3 sm:w-4 sm:h-4" />
+                  {/* Glass Card Overlay 1 — Top Right Signal Badge (Desktop only for clean mobile chart) */}
+                  <div className="hidden sm:flex absolute top-4 right-4 p-3 rounded-2xl bg-[#0B192C]/90 border border-amber-500/40 backdrop-blur-md shadow-xl items-center gap-2 animate-float-particle">
+                    <div className="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center border border-emerald-500/30 shrink-0">
+                      <TrendingUp className="w-4 h-4" />
                     </div>
                     <div>
-                      <span className="text-[8px] sm:text-[9px] font-mono font-bold text-slate-400 block uppercase">Technical</span>
-                      <span className="text-[9.5px] sm:text-[11px] font-extrabold text-emerald-400 font-mono">+24.8% Discipline</span>
+                      <span className="text-[9px] font-mono font-bold text-slate-400 block uppercase">Technical</span>
+                      <span className="text-[11px] font-extrabold text-emerald-400 font-mono">+24.8% Discipline</span>
                     </div>
                   </div>
 
-                  {/* Glass Card Overlay 2 — Bottom Left Shield Badge */}
-                  <div className="absolute bottom-12 left-2.5 sm:bottom-16 sm:left-4 p-2 sm:p-3 rounded-xl sm:rounded-2xl bg-[#0B192C]/90 border border-cyan-500/40 backdrop-blur-md shadow-xl flex items-center gap-2 animate-float-particle-alt">
-                    <div className="w-5 h-5 sm:w-7 sm:h-7 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center border border-cyan-500/30 shrink-0">
-                      <ShieldCheck className="w-3 h-3 sm:w-4 sm:h-4" />
+                  {/* Glass Card Overlay 2 — Bottom Left Shield Badge (Desktop only for clean mobile chart) */}
+                  <div className="hidden sm:flex absolute bottom-16 left-4 p-3 rounded-2xl bg-[#0B192C]/90 border border-cyan-500/40 backdrop-blur-md shadow-xl items-center gap-2 animate-float-particle-alt">
+                    <div className="w-7 h-7 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center border border-cyan-500/30 shrink-0">
+                      <ShieldCheck className="w-4 h-4" />
                     </div>
                     <div>
-                      <span className="text-[8px] sm:text-[9px] font-mono font-bold text-slate-400 block uppercase">Risk Control</span>
-                      <span className="text-[9.5px] sm:text-[11px] font-extrabold text-cyan-400 font-mono">1:3 Stop-Loss</span>
+                      <span className="text-[9px] font-mono font-bold text-slate-400 block uppercase">Risk Control</span>
+                      <span className="text-[11px] font-extrabold text-cyan-400 font-mono">1:3 Stop-Loss</span>
                     </div>
                   </div>
 
@@ -358,7 +358,7 @@ const HomePage = ({ onOpenEnquiry }) => {
                 <p className="text-sm sm:text-xl font-bold text-[#0B192C] leading-relaxed border-l-4 border-amber-500 pl-3 sm:pl-4">
                   "{WHAT_IS_EMA.answer}"
                 </p>
-                <p className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed border-t border-slate-200 pt-3 sm:pt-4">
+                <p className="hidden sm:block text-xs sm:text-sm text-slate-600 font-medium leading-relaxed border-t border-slate-200 pt-3 sm:pt-4">
                   {WHAT_IS_EMA.approach}
                 </p>
               </div>
@@ -402,7 +402,7 @@ const HomePage = ({ onOpenEnquiry }) => {
                     <h3 className="text-lg sm:text-xl font-black text-white font-heading group-hover:text-amber-400 transition-colors">{cat.category}</h3>
                     <p className="text-xs text-slate-300 font-medium leading-relaxed">{cat.description}</p>
 
-                    <ul className="flex flex-col gap-2 pt-3 sm:pt-4 border-t border-slate-800">
+                    <ul className="hidden sm:flex flex-col gap-2 pt-3 sm:pt-4 border-t border-slate-800">
                       {cat.topics.map((t, ti) => (
                         <li key={ti} className="flex items-start gap-2 text-xs text-slate-300 font-medium">
                           <CheckCircle2 className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />
