@@ -180,8 +180,8 @@ const HomePage = ({ onOpenEnquiry }) => {
 
             </div>
 
-            {/* Right Hero Column — 3D Glassmorphic Trading Terminal Showcase */}
-            <div className="lg:col-span-5 relative animate-scale-in">
+            {/* Right Hero Column — 3D Glassmorphic Trading Terminal Showcase (Desktop only for sleek mobile view) */}
+            <div className="hidden lg:block lg:col-span-5 relative animate-scale-in">
               
               {/* Outer Spinning Orbit Rings */}
               <div className="absolute -inset-6 rounded-full border border-amber-500/15 animate-spin-slow pointer-events-none hidden sm:block" />
