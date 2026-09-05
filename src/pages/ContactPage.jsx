@@ -16,7 +16,7 @@ const ContactPage = () => {
     mobileNumber: '',
     email: '',
     tradingExperience: 'Beginner (0-6 months)',
-    interestedCourse: 'Stock Market Fundamentals',
+    interestedCourse: 'Beginner Level',
     preferredContact: 'WhatsApp',
     message: '',
   });
@@ -226,13 +226,13 @@ const ContactPage = () => {
                         />
                       </div>
                       <div className="flex flex-col gap-1 sm:gap-1.5">
-                        <label className="text-[11px] sm:text-xs font-bold text-slate-700 uppercase font-mono">Interested Course</label>
+                        <label className="text-[11px] sm:text-xs font-bold text-slate-700 uppercase font-mono">Program Level</label>
                         <select
                           value={formData.interestedCourse}
                           onChange={(e) => setFormData({ ...formData, interestedCourse: e.target.value })}
                           className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-slate-50 border border-slate-200 text-xs font-medium text-slate-900 focus:outline-none focus:border-[#F59E0B] transition-all cursor-pointer"
                         >
-                          {COURSES.map((c) => <option key={c.id} value={c.title}>{c.title}</option>)}
+                          {COURSES.map((c) => <option key={c.id} value={`${c.title} Level`}>{c.title} Level</option>)}
                         </select>
                       </div>
                     </div>

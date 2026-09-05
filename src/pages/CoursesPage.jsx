@@ -10,34 +10,22 @@ import { getCourseSchema, getBreadcrumbSchema } from '../utils/seoSchemas';
 
 // Per-course enrichment matching ProgramsSection.jsx
 const COURSE_EXTRAS = {
-  'market-fundamentals': {
+  'beginner': {
     outcome: 'Build complete market foundation & understand order mechanics',
     mode: 'Live Interactive',
-    support: 'Live Q&A Sessions',
+    support: '1-on-1 Guidance + Live Q&A',
     popular: false,
   },
-  'technical-analysis': {
+  'intermediate': {
     outcome: 'Read price charts, trends & market structure independently',
     mode: 'Live Interactive',
-    support: 'Live Q&A + Recordings',
+    support: 'Live Market Cases + Recordings',
     popular: true,
   },
-  'options-trading': {
-    outcome: 'Understand option pricing, Greeks, premium decay & risk control',
+  'advanced': {
+    outcome: 'Master options pricing, Greeks, premium decay & risk control',
     mode: 'Live Interactive',
-    support: 'Live Q&A + Recordings',
-    popular: true,
-  },
-  'advanced-derivatives': {
-    outcome: 'Master complex derivatives strategies with full risk awareness',
-    mode: 'Live Interactive',
-    support: 'Live Q&A + Recordings',
-    popular: false,
-  },
-  'trading-psychology': {
-    outcome: 'Build disciplined, repeatable decision-making habits',
-    mode: 'Live Interactive',
-    support: 'Live Q&A Sessions',
+    support: 'Advanced Mentorship + Trade Reviews',
     popular: false,
   },
 };
@@ -134,13 +122,13 @@ const CoursesPage = ({ onOpenEnquiry }) => {
           {/* Section Label */}
           <div className="flex flex-col items-center text-center gap-3 mb-10 sm:mb-14">
             <span className="px-3.5 py-1 rounded-full bg-[#FFFBEB] border border-[#FDE68A] text-[#D97706] text-[11px] font-extrabold uppercase tracking-wider font-mono">
-              FULL CURRICULUM
+              ONE PROGRAM • 3 TAILORED LEVELS
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-[#07110D] font-heading tracking-tight">
-              Explore All Courses
+              One Structured Program. Tailored to Your Level.
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 font-medium max-w-lg">
-              Choose the track that matches your experience level and learning goals.
+              We offer one comprehensive flagship mentorship program with a customized syllabus tailored to your experience: Beginner, Intermediate, or Advanced.
             </p>
           </div>
 

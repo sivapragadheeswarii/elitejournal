@@ -72,7 +72,7 @@ const Footer = () => {
                 Programs
               </h4>
               <ul className="flex flex-col gap-2 text-xs text-[#94A3B8] font-semibold">
-                {COURSES.slice(0, 5).map((course) => (
+                {COURSES.map((course) => (
                   <li key={course.id}>
                     <a
                       href="/#courses"
@@ -83,7 +83,7 @@ const Footer = () => {
                       className="hover:text-white transition-colors flex items-center gap-1.5"
                     >
                       <ArrowRight className="w-3 h-3 text-[#F59E0B]/70 shrink-0" />
-                      <span className="truncate">{course.title}</span>
+                      <span className="truncate">{course.title} Level</span>
                     </a>
                   </li>
                 ))}

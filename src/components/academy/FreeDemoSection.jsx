@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Sparkles, Send, CheckCircle2, ShieldCheck, PhoneCall, Loader2 } from 'lucide-react';
 import { BRAND } from '../../data/emaData';
 
@@ -11,6 +11,16 @@ const FreeDemoSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
+
+  useEffect(() => {
+    const handleSelectLevel = (e) => {
+      if (e.detail) {
+        setFormData((prev) => ({ ...prev, experienceLevel: e.detail }));
+      }
+    };
+    window.addEventListener('select-ema-level', handleSelectLevel);
+    return () => window.removeEventListener('select-ema-level', handleSelectLevel);
+  }, []);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -51,7 +61,9 @@ const FreeDemoSection = () => {
   };
 
   return (
-    <section id="contact" className="py-14 sm:py-24 bg-[#07110D] text-[#E2E8F0] border-b border-[#1F3A2E] relative overflow-hidden">
+    <section id="free-demo" className="py-14 sm:py-24 bg-[#07110D] text-[#E2E8F0] border-b border-[#1F3A2E] relative overflow-hidden">
+      {/* Target anchor for contact */}
+      <div id="contact" className="absolute -top-10" />
       
       {/* Glow Orbs */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-[#F59E0B]/10 rounded-full blur-[150px] pointer-events-none" />
@@ -170,7 +182,7 @@ const FreeDemoSection = () => {
                   {/* Experience Level */}
                   <div className="flex flex-col gap-1.5">
                     <label className="text-xs font-bold text-[#E2E8F0] tracking-wide">
-                      Experience Level
+                      Program Level / Experience
                     </label>
                     <select
                       name="experienceLevel"
@@ -178,9 +190,9 @@ const FreeDemoSection = () => {
                       onChange={handleChange}
                       className="px-4 py-3 rounded-xl bg-[#07110D] border border-[#1F3A2E] focus:border-[#F59E0B] text-white text-xs sm:text-sm font-medium outline-none transition-colors"
                     >
-                      <option value="Beginner">Complete Beginner (No Experience)</option>
-                      <option value="Intermediate">Intermediate (Traded before)</option>
-                      <option value="Advanced">Advanced (Options / Technical trader)</option>
+                      <option value="Beginner">Beginner Level (Zero Market Experience)</option>
+                      <option value="Intermediate">Intermediate Level (Knows Basics / Chart Reading)</option>
+                      <option value="Advanced">Advanced Level (Options / Active Trader)</option>
                     </select>
                   </div>
 

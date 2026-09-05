@@ -13,10 +13,23 @@ import { BRAND } from '../data/emaData';
 const CourseDetailPage = ({ onOpenEnquiry }) => {
   const { slug } = useParams();
 
+  const slugAliases = {
+    'stock-market-fundamentals': 'beginner',
+    'stock-market-basics': 'beginner',
+    'technical-analysis': 'intermediate',
+    'intraday-trading': 'intermediate',
+    'options-trading': 'advanced',
+    'advanced-derivatives': 'advanced',
+    'trading-psychology': 'advanced',
+    'risk-management': 'beginner',
+  };
+  const resolvedSlug = slugAliases[slug] || slug;
+
   const course = COURSES.find(
-    (c) => c.slug === slug ||
-           c.id === slug ||
-           (slug === 'stock-market-basics' && c.id === 'stock-market-fundamentals')
+    (c) => c.slug === resolvedSlug ||
+           c.id === resolvedSlug ||
+           c.slug === slug ||
+           c.id === slug
   ) || COURSES_DATA.find(
     (c) => c.id === slug || c.slug === slug
   );

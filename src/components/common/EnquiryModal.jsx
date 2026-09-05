@@ -11,7 +11,7 @@ const EnquiryModal = ({ isOpen, onClose }) => {
     mobileNumber: '',
     email: '',
     tradingExperience: 'Beginner (0-6 months)',
-    interestedCourse: 'Stock Market Fundamentals',
+    interestedCourse: 'Beginner Level',
     preferredContact: 'WhatsApp',
     message: '',
   });
@@ -126,14 +126,14 @@ const EnquiryModal = ({ isOpen, onClose }) => {
                 </div>
 
                 <div className="flex flex-col gap-1">
-                  <label className="text-xs font-bold text-slate-700">Interested Course</label>
+                  <label className="text-xs font-bold text-slate-700">Interested Level</label>
                   <select
                     value={formData.interestedCourse}
                     onChange={(e) => setFormData({ ...formData, interestedCourse: e.target.value })}
                     className="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2 text-xs font-medium text-slate-900 focus:ring-2 focus:ring-[#0D1B15] outline-none"
                   >
                     {COURSES.map((c) => (
-                      <option key={c.id} value={c.title}>{c.title}</option>
+                      <option key={c.id} value={`${c.title} Level`}>{c.title} Level</option>
                     ))}
                   </select>
                 </div>

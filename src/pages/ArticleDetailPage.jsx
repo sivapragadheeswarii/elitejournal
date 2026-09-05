@@ -116,11 +116,11 @@ const ArticleDetailPage = () => {
         <div className="pt-6 border-t border-slate-200 flex flex-col gap-4">
           <h2 className="text-xl font-extrabold text-[#0D1B15] font-heading">Related Learning</h2>
           <div className="flex flex-wrap gap-3">
-            <Link to="/courses/stock-market-fundamentals" className="px-4 py-2 rounded-xl bg-slate-100 border border-slate-300 text-[#0D1B15] text-xs font-bold hover:bg-[#0D1B15] hover:text-white transition-colors">
-              Stock Market Fundamentals Course
+            <Link to="/courses/beginner" className="px-4 py-2 rounded-xl bg-slate-100 border border-slate-300 text-[#0D1B15] text-xs font-bold hover:bg-[#0D1B15] hover:text-white transition-colors">
+              Beginner Level Program
             </Link>
-            <Link to="/courses/technical-analysis" className="px-4 py-2 rounded-xl bg-slate-100 border border-slate-300 text-[#0D1B15] text-xs font-bold hover:bg-[#0D1B15] hover:text-white transition-colors">
-              Technical Analysis Course
+            <Link to="/courses/intermediate" className="px-4 py-2 rounded-xl bg-slate-100 border border-slate-300 text-[#0D1B15] text-xs font-bold hover:bg-[#0D1B15] hover:text-white transition-colors">
+              Intermediate Level Program
             </Link>
             <Link to="/learning-hub" className="px-4 py-2 rounded-xl bg-slate-100 border border-slate-300 text-[#0D1B15] text-xs font-bold hover:bg-[#0D1B15] hover:text-white transition-colors">
               Browse All Learning Hub Articles
