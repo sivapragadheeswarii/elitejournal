@@ -36,9 +36,6 @@ const ProgramsSection = ({ onOpenDemo }) => {
               Tailored to Your Level.
             </span>
           </h2>
-          <p className="text-xs sm:text-base text-[#94A3B8] font-medium max-w-2xl leading-relaxed">
-            We don't offer scattered or disconnected courses. Elite Market Academy delivers one complete mentorship program, with the syllabus customized to suit whether you are a Beginner, Intermediate, or Advanced learner.
-          </p>
         </div>
 
         {/* 3 Level Cards Grid */}
