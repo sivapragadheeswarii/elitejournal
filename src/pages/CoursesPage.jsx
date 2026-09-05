@@ -155,14 +155,10 @@ const CoursesPage = ({ onOpenEnquiry }) => {
                   )}
 
                   <div className="flex flex-col gap-4">
-                    {/* Level & Duration */}
-                    <div className="flex items-center justify-between">
+                    {/* Level */}
+                    <div className="flex items-center">
                       <span className="px-2.5 py-0.5 rounded bg-[#07110D] text-[#F59E0B] font-mono text-[10px] font-extrabold">
                         {course.level}
-                      </span>
-                      <span className="flex items-center gap-1 text-xs text-slate-500 font-mono font-bold">
-                        <Clock className="w-3.5 h-3.5 text-[#D97706]" />
-                        {course.duration}
                       </span>
                     </div>
 

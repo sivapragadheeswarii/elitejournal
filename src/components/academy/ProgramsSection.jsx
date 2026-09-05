@@ -1,5 +1,5 @@
 import React from 'react';
-import { Clock, Video, MessageCircle, ArrowRight, Star, Sparkles, Shield } from 'lucide-react';
+import { Video, MessageCircle, ArrowRight, Star, Sparkles, Shield } from 'lucide-react';
 import { COURSES } from '../../data/emaData';
 
 const ProgramsSection = ({ onOpenDemo }) => {
@@ -61,18 +61,14 @@ const ProgramsSection = ({ onOpenDemo }) => {
                 )}
 
                 <div className="flex flex-col gap-5">
-                  {/* Top Meta: Level Tag & Duration */}
-                  <div className="flex items-center justify-between">
+                  {/* Top Meta: Level Tag */}
+                  <div className="flex items-center">
                     <span className={`px-2.5 py-1 rounded-lg font-mono text-[10px] font-extrabold tracking-wider border ${
                       isPopular
                         ? 'bg-[#F59E0B]/10 text-[#F59E0B] border-[#F59E0B]/40'
                         : 'bg-[#07110D] text-emerald-400 border-[#1F3A2E]'
                     }`}>
                       LEVEL 0{idx + 1} • {course.level.toUpperCase()}
-                    </span>
-                    <span className="flex items-center gap-1.5 text-xs text-[#94A3B8] font-mono font-bold">
-                      <Clock className="w-3.5 h-3.5 text-[#F59E0B]" />
-                      {course.duration}
                     </span>
                   </div>
 
