@@ -16,7 +16,7 @@ const RiskCalculatorWidget = () => {
   const potentialProfit = positionQuantity * (stopLossPoints * 2.5);
 
   return (
-    <div className="w-full rounded-3xl bg-[#0B192C] text-white border border-slate-700/80 p-6 sm:p-8 shadow-2xl relative overflow-hidden group">
+    <div className="w-full rounded-3xl bg-[#0D1B15] text-white border border-slate-700/80 p-6 sm:p-8 shadow-2xl relative overflow-hidden group">
       
       {/* Background Grids & Ambient Glow */}
       <div className="absolute -bottom-16 -right-16 w-72 h-72 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
@@ -26,7 +26,7 @@ const RiskCalculatorWidget = () => {
       <div className="relative z-10 flex flex-col gap-6">
         
         {/* Header */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#1F3A2E] pb-5">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-amber-500/15 border border-amber-500/30 text-amber-400 flex items-center justify-center shrink-0">
               <Calculator className="w-5 h-5" />
@@ -45,7 +45,7 @@ const RiskCalculatorWidget = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
           {/* Sliders Input Area */}
-          <div className="lg:col-span-7 flex flex-col gap-5 bg-slate-900/80 p-5 sm:p-6 rounded-2xl border border-slate-800">
+          <div className="lg:col-span-7 flex flex-col gap-5 bg-slate-900/80 p-5 sm:p-6 rounded-2xl border border-[#1F3A2E]">
             
             {/* Capital Input */}
             <div className="flex flex-col gap-2">
@@ -120,8 +120,8 @@ const RiskCalculatorWidget = () => {
           <div className="lg:col-span-5 flex flex-col gap-4">
             
             {/* Position Size Card */}
-            <div className="p-5 rounded-2xl bg-gradient-to-br from-slate-900 to-[#0B192C] border border-amber-500/30 flex flex-col gap-3 shadow-xl relative overflow-hidden">
-              <div className="flex justify-between items-center text-xs font-mono border-b border-slate-800 pb-2">
+            <div className="p-5 rounded-2xl bg-gradient-to-br from-slate-900 to-[#0D1B15] border border-amber-500/30 flex flex-col gap-3 shadow-xl relative overflow-hidden">
+              <div className="flex justify-between items-center text-xs font-mono border-b border-[#1F3A2E] pb-2">
                 <span className="text-slate-400 font-bold">CALCULATED POSITION</span>
                 <span className="text-amber-400 font-black">EMA RISK ENGINE</span>
               </div>
@@ -137,7 +137,7 @@ const RiskCalculatorWidget = () => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-4 border-t border-slate-800/80 pt-3">
+              <div className="grid grid-cols-2 gap-4 border-t border-[#1F3A2E]/80 pt-3">
                 <div>
                   <span className="text-[10px] text-slate-400 font-mono block">TARGET PRICE (1:2.5)</span>
                   <span className="text-base font-black text-emerald-400 font-mono">₹{targetPrice.toLocaleString('en-IN')}</span>
@@ -150,7 +150,7 @@ const RiskCalculatorWidget = () => {
             </div>
 
             {/* Educational Insight Box */}
-            <div className="p-4 rounded-xl bg-slate-900/70 border border-slate-800 flex items-start gap-3 text-xs text-slate-300 font-medium">
+            <div className="p-4 rounded-xl bg-slate-900/70 border border-[#1F3A2E] flex items-start gap-3 text-xs text-slate-300 font-medium">
               <ShieldAlert className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
               <p>
                 <strong>The Discipline Factor:</strong> Notice how entering with a predefined stop loss guarantees your risk is capped at <strong>₹{maxRiskAmount.toLocaleString('en-IN')}</strong>, preserving 99% of your capital for future setups.

@@ -17,6 +17,7 @@ import FAQPage from './pages/FAQPage';
 import ContactPage from './pages/ContactPage';
 import EnrollmentPage from './pages/EnrollmentPage';
 import MarketAnalysisPage from './pages/MarketAnalysisPage';
+import EPTSJournalLandingPage from './pages/EPTSJournalLandingPage';
 import {
   DisclaimerPage,
   RiskDisclosurePage,
@@ -81,15 +82,18 @@ function AppContent() {
       <main className="flex-1">
         <Routes>
           <Route path="/" element={<HomePage onOpenEnquiry={handleOpenEnquiry} onOpenPortal={handleOpenPortal} />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/courses" element={<CoursesPage onOpenEnquiry={handleOpenEnquiry} />} />
-          <Route path="/courses/:slug" element={<CourseDetailPage onOpenEnquiry={handleOpenEnquiry} />} />
-          <Route path="/learning-hub" element={<LearningHubPage />} />
-          <Route path="/learning-hub/:slug" element={<ArticleDetailPage />} />
-          <Route path="/faq" element={<FAQPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/enrollment" element={<EnrollmentPage />} />
-          <Route path="/market-analysis" element={<MarketAnalysisPage onOpenPortal={handleOpenPortal} />} />
+          <Route path="/about" element={<HomePage onOpenEnquiry={handleOpenEnquiry} onOpenPortal={handleOpenPortal} />} />
+          <Route path="/courses" element={<HomePage onOpenEnquiry={handleOpenEnquiry} onOpenPortal={handleOpenPortal} />} />
+          <Route path="/courses/:slug" element={<HomePage onOpenEnquiry={handleOpenEnquiry} onOpenPortal={handleOpenPortal} />} />
+          <Route path="/learning-hub" element={<HomePage onOpenEnquiry={handleOpenEnquiry} onOpenPortal={handleOpenPortal} />} />
+          <Route path="/learning-hub/:slug" element={<HomePage onOpenEnquiry={handleOpenEnquiry} onOpenPortal={handleOpenPortal} />} />
+          <Route path="/faq" element={<HomePage onOpenEnquiry={handleOpenEnquiry} onOpenPortal={handleOpenPortal} />} />
+          <Route path="/contact" element={<HomePage onOpenEnquiry={handleOpenEnquiry} onOpenPortal={handleOpenPortal} />} />
+          <Route path="/enrollment" element={<HomePage onOpenEnquiry={handleOpenEnquiry} onOpenPortal={handleOpenPortal} />} />
+          <Route path="/market-analysis" element={<HomePage onOpenEnquiry={handleOpenEnquiry} onOpenPortal={handleOpenPortal} />} />
+
+          {/* EPTS Journal Standalone Route */}
+          <Route path="/epts-journal" element={<EPTSJournalLandingPage onOpenPortal={handleOpenPortal} />} />
 
           {/* Legal Pages */}
           <Route path="/disclaimer" element={<DisclaimerPage />} />
@@ -98,7 +102,7 @@ function AppContent() {
           <Route path="/terms" element={<TermsPage />} />
           <Route path="/refund-policy" element={<RefundPolicyPage />} />
 
-          {/* Fallback & Private NoIndex Route */}
+          {/* Fallback */}
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>

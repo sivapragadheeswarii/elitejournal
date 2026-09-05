@@ -4,18 +4,18 @@ import heroEmaCh from '../assets/hero_ema_chart.png';
 
 /* Shared Compact Header for all Legal pages */
 const LegalHero = ({ badge, title, subtitle }) => (
-  <section className="relative py-8 sm:py-14 bg-[#050E1A] text-white border-b border-slate-800 overflow-hidden">
-    <div className="absolute inset-0 bg-[#050E1A]">
+  <section className="relative py-8 sm:py-14 bg-[#07110D] text-white border-b border-[#1F3A2E] overflow-hidden">
+    <div className="absolute inset-0 bg-[#07110D]">
       <img src={heroEmaCh} alt="" aria-hidden="true" className="w-full h-full object-cover object-center scale-105 blur-md opacity-20" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#050E1A] via-[#0B192C]/95 to-[#050E1A]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#07110D] via-[#0D1B15]/95 to-[#07110D]" />
     </div>
     <div className="absolute inset-0 bg-financial-grid-dark opacity-15 pointer-events-none" />
-    <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/8 rounded-full blur-3xl pointer-events-none animate-blob-slow" />
+    <div className="absolute top-0 right-0 w-64 h-64 bg-[#FFFBEB]0/8 rounded-full blur-3xl pointer-events-none " />
     <div className="max-w-4xl mx-auto px-3.5 sm:px-6 relative z-10 text-left w-full">
-      <span className="inline-block text-[10px] sm:text-xs font-bold text-amber-400 uppercase tracking-widest px-3 py-1 sm:px-3.5 sm:py-1 rounded-full bg-[#0B192C] border border-amber-500/30 font-mono mb-2.5 sm:mb-3 backdrop-blur-sm shadow-md">
+      <span className="inline-block text-[10px] sm:text-xs font-bold text-[#F59E0B] uppercase tracking-widest px-3 py-1 sm:px-3.5 sm:py-1 rounded-full bg-[#0D1B15] border border-[#F59E0B]/30 font-mono mb-2.5 sm:mb-3 backdrop-blur-sm shadow-md">
         {badge}
       </span>
-      <h1 className="text-xl xs:text-2xl sm:text-4xl font-black text-white font-heading tracking-tight leading-[1.15] mb-1.5 sm:mb-2">{title}</h1>
+      <h1 className="text-xl xs:text-2xl sm:text-4xl font-extrabold text-white font-heading tracking-tight leading-[1.15] mb-1.5 sm:mb-2">{title}</h1>
       {subtitle && <p className="text-xs sm:text-sm text-slate-300 font-medium max-w-2xl leading-relaxed">{subtitle}</p>}
     </div>
   </section>

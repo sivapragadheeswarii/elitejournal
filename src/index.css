@@ -558,17 +558,70 @@
   z-index: 1;
 }
 
-/* Floating 3D Badge Perspective */
-.badge-3d {
-  box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.4);
-  transform: translateY(-2px);
-  transition: all 0.3s ease;
+/* ─────────────────────────────────────────────
+   MOBILE VIEW ANIMATIONS & MICRO-INTERACTIONS
+───────────────────────────────────────────── */
+
+/* Shimmer Sweep on High-Impact Buttons */
+@keyframes shimmerBtn {
+  0% { transform: translateX(-150%) skewX(-15deg); }
+  40%, 100% { transform: translateX(250%) skewX(-15deg); }
 }
 
-.badge-3d:hover {
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 15px 30px -5px rgba(245, 158, 11, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
 }
+
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+  animation: shimmerBtn 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Subtle Breathing Glow for Mobile Sticky Button */
+@keyframes breathingGlow {
+  0%, 100% {
+    box-shadow: 0 4px 15px -2px rgba(245, 158, 11, 0.35);
+  }
+  50% {
+    box-shadow: 0 6px 24px 2px rgba(245, 158, 11, 0.65);
+  }
+}
+
+.animate-breathing-glow {
+  animation: breathingGlow 3s ease-in-out infinite;
+}
+
+/* Subtle Float for Visual Cards on Mobile */
+@keyframes mobileFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.animate-mobile-float {
+  animation: mobileFloat 4s ease-in-out infinite;
+}
+
+/* Mobile Touch Press Feedback */
+.touch-card {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.touch-card:active {
+  transform: scale(0.98);
+}
+
 
 
 

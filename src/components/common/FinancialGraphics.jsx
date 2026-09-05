@@ -175,7 +175,7 @@ export const LiveRunningCandleChart = () => {
   return (
     <div className="w-full relative">
       {/* Header Info Bar */}
-      <div className="flex items-center justify-between pb-3 border-b border-slate-800/60 relative z-10 font-mono">
+      <div className="flex items-center justify-between pb-3 border-b border-[#1F3A2E]/60 relative z-10 font-mono">
         <div className="flex items-center gap-2">
           <span className="relative flex h-2.5 w-2.5">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -273,13 +273,13 @@ export const LiveRunningCandleChart = () => {
  */
 export const CandlestickChartVisual = () => {
   return (
-    <div className="w-full rounded-2xl bg-[#0B192C] border border-slate-700/80 p-5 sm:p-6 text-white shadow-2xl relative overflow-hidden group">
+    <div className="w-full rounded-2xl bg-[#0D1B15] border border-slate-700/80 p-5 sm:p-6 text-white shadow-2xl relative overflow-hidden group">
       {/* Subtle Ambient Gold Glow */}
       <div className="absolute -top-12 -right-12 w-40 h-40 bg-amber-500/10 rounded-full blur-2xl pointer-events-none" />
       <div className="absolute inset-0 bg-financial-grid-dark opacity-40 pointer-events-none" />
 
       {/* Header Info */}
-      <div className="flex items-center justify-between pb-4 border-b border-slate-800 relative z-10">
+      <div className="flex items-center justify-between pb-4 border-b border-[#1F3A2E] relative z-10">
         <div className="flex items-center gap-2">
           <div className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
           <span className="text-xs font-mono font-bold text-slate-300">SYSTEMATIC ANALYSIS</span>
@@ -365,16 +365,16 @@ export const CandlestickChartVisual = () => {
       </div>
 
       {/* Footer Metrics Strip */}
-      <div className="grid grid-cols-3 gap-2 pt-4 border-t border-slate-800 text-center relative z-10">
-        <div className="p-2 rounded-lg bg-slate-900/60 border border-slate-800">
+      <div className="grid grid-cols-3 gap-2 pt-4 border-t border-[#1F3A2E] text-center relative z-10">
+        <div className="p-2 rounded-lg bg-slate-900/60 border border-[#1F3A2E]">
           <span className="block text-[10px] font-mono text-slate-400 font-bold">ANALYSIS</span>
           <span className="text-xs font-bold text-emerald-400">Price Action</span>
         </div>
-        <div className="p-2 rounded-lg bg-slate-900/60 border border-slate-800">
+        <div className="p-2 rounded-lg bg-slate-900/60 border border-[#1F3A2E]">
           <span className="block text-[10px] font-mono text-slate-400 font-bold">DISCIPLINE</span>
           <span className="text-xs font-bold text-amber-400">Strict Stop-Loss</span>
         </div>
-        <div className="p-2 rounded-lg bg-slate-900/60 border border-slate-800">
+        <div className="p-2 rounded-lg bg-slate-900/60 border border-[#1F3A2E]">
           <span className="block text-[10px] font-mono text-slate-400 font-bold">SYSTEM</span>
           <span className="text-xs font-bold text-slate-200">Elite Tracking</span>
         </div>
@@ -401,7 +401,7 @@ export const CourseCurriculumAnimation = () => {
   const tabs = [
     { id: 0, label: 'Price Action', icon: TrendingUp, color: 'text-emerald-400', border: 'border-emerald-500/40' },
     { id: 1, label: 'Options Risk', icon: ShieldCheck, color: 'text-amber-400', border: 'border-amber-500/40' },
-    { id: 2, label: 'Journal System', icon: Activity, color: 'text-cyan-400', border: 'border-cyan-500/40' },
+    { id: 2, label: 'Journal System', icon: Activity, color: 'text-emerald-400', border: 'border-cyan-500/40' },
   ];
 
   return (
@@ -412,7 +412,7 @@ export const CourseCurriculumAnimation = () => {
       <div className="absolute inset-0 bg-financial-grid-dark opacity-30 pointer-events-none" />
 
       {/* Terminal Top Bar */}
-      <div className="flex items-center justify-between pb-3 border-b border-slate-800 relative z-10 font-mono">
+      <div className="flex items-center justify-between pb-3 border-b border-[#1F3A2E] relative z-10 font-mono">
         <div className="flex items-center gap-2">
           <span className="relative flex h-2.5 w-2.5">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
@@ -438,7 +438,7 @@ export const CourseCurriculumAnimation = () => {
               className={`p-2 rounded-xl text-center flex flex-col sm:flex-row items-center justify-center gap-1.5 transition-all cursor-pointer border ${
                 isActive
                   ? `bg-slate-800/90 text-white shadow-lg ${t.border}`
-                  : 'bg-slate-900/60 text-slate-400 border-slate-800/60 hover:bg-slate-800/40'
+                  : 'bg-slate-900/60 text-slate-400 border-[#1F3A2E]/60 hover:bg-slate-800/40'
               }`}
             >
               <IconComp className={`w-3.5 h-3.5 ${isActive ? t.color : 'text-slate-500'}`} />
@@ -495,14 +495,14 @@ export const CourseCurriculumAnimation = () => {
 
               {/* Breakout Callout Badge */}
               <g transform="translate(290, 5)">
-                <rect x="0" y="0" width="130" height="24" rx="6" fill="#0B192C" stroke="#00E676" strokeWidth="1" />
+                <rect x="0" y="0" width="130" height="24" rx="6" fill="#0D1B15" stroke="#00E676" strokeWidth="1" />
                 <text x="65" y="16" fill="#00E676" fontSize="9.5" fontFamily="monospace" fontWeight="bold" textAnchor="middle">
                   🚀 BREAKOUT CONFIRMED
                 </text>
               </g>
             </svg>
 
-            <div className="flex items-center justify-between text-[11px] font-mono text-slate-300 px-2 pt-1 border-t border-slate-800">
+            <div className="flex items-center justify-between text-[11px] font-mono text-slate-300 px-2 pt-1 border-t border-[#1F3A2E]">
               <span className="text-emerald-400 font-bold">Structure: Higher Highs & Lows</span>
               <span className="text-amber-400 font-bold">Target: +1.8% Expansion</span>
             </div>
@@ -535,7 +535,7 @@ export const CourseCurriculumAnimation = () => {
                 <span className="text-[10px] text-slate-400 font-bold uppercase">WIN-RATE PROBABILITY</span>
                 <div className="flex items-baseline gap-1">
                   <span className="text-xl font-black text-emerald-400">68.5%</span>
-                  <span className="text-[10px] text-cyan-400 font-bold">HIGH PROB</span>
+                  <span className="text-[10px] text-emerald-400 font-bold">HIGH PROB</span>
                 </div>
                 <div className="w-full bg-slate-800 rounded-full h-2 overflow-hidden">
                   <div className="bg-gradient-to-r from-emerald-500 to-cyan-400 h-full w-[68%]" />
@@ -547,7 +547,7 @@ export const CourseCurriculumAnimation = () => {
             </div>
 
             {/* Position Sizing Recommendation Bar */}
-            <div className="p-2.5 rounded-xl bg-slate-900/90 border border-slate-800 flex items-center justify-between text-xs">
+            <div className="p-2.5 rounded-xl bg-slate-900/90 border border-[#1F3A2E] flex items-center justify-between text-xs">
               <span className="text-slate-300 font-semibold">Max Capital at Risk per Trade:</span>
               <span className="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-black border border-emerald-500/30">
                 1.5% MAX
@@ -587,12 +587,12 @@ export const CourseCurriculumAnimation = () => {
             </div>
 
             {/* Discipline Meter Strip */}
-            <div className="p-2.5 rounded-xl bg-slate-900/90 border border-cyan-500/30 flex items-center justify-between text-xs mt-1">
-              <span className="text-cyan-400 font-extrabold flex items-center gap-1.5">
+            <div className="p-2.5 rounded-xl bg-slate-900/90 border border-emerald-500/30 flex items-center justify-between text-xs mt-1">
+              <span className="text-emerald-400 font-extrabold flex items-center gap-1.5">
                 <CheckCircle2 className="w-3.5 h-3.5" />
                 Rule Compliance Score:
               </span>
-              <span className="font-black text-white px-2 py-0.5 rounded bg-cyan-500/20 border border-cyan-500/30">
+              <span className="font-black text-white px-2 py-0.5 rounded bg-cyan-500/20 border border-emerald-500/30">
                 98 / 100
               </span>
             </div>
@@ -602,18 +602,18 @@ export const CourseCurriculumAnimation = () => {
       </div>
 
       {/* Footer Indicators */}
-      <div className="grid grid-cols-3 gap-2 pt-2.5 border-t border-slate-800/80 text-center relative z-10 font-mono mt-1">
-        <div className="p-1.5 rounded-lg bg-slate-900/80 border border-slate-800">
+      <div className="grid grid-cols-3 gap-2 pt-2.5 border-t border-[#1F3A2E]/80 text-center relative z-10 font-mono mt-1">
+        <div className="p-1.5 rounded-lg bg-slate-900/80 border border-[#1F3A2E]">
           <span className="block text-[8.5px] text-slate-400 font-bold">MODULE 1</span>
           <span className="text-[10.5px] font-extrabold text-emerald-400">Price Action</span>
         </div>
-        <div className="p-1.5 rounded-lg bg-slate-900/80 border border-slate-800">
+        <div className="p-1.5 rounded-lg bg-slate-900/80 border border-[#1F3A2E]">
           <span className="block text-[8.5px] text-slate-400 font-bold">MODULE 2</span>
           <span className="text-[10.5px] font-extrabold text-amber-400">Risk Sizing</span>
         </div>
-        <div className="p-1.5 rounded-lg bg-slate-900/80 border border-slate-800">
+        <div className="p-1.5 rounded-lg bg-slate-900/80 border border-[#1F3A2E]">
           <span className="block text-[8.5px] text-slate-400 font-bold">MODULE 3</span>
-          <span className="text-[10.5px] font-extrabold text-cyan-400">Discipline</span>
+          <span className="text-[10.5px] font-extrabold text-emerald-400">Discipline</span>
         </div>
       </div>
     </div>
@@ -642,7 +642,7 @@ export const MultiMonitorTradingConsole = () => {
       <div className="absolute inset-0 bg-financial-grid-dark opacity-30 pointer-events-none" />
 
       {/* Terminal Main Header */}
-      <div className="flex items-center justify-between pb-3 border-b border-slate-800 relative z-10 font-mono mb-3">
+      <div className="flex items-center justify-between pb-3 border-b border-[#1F3A2E] relative z-10 font-mono mb-3">
         <div className="flex items-center gap-2">
           <span className="relative flex h-2.5 w-2.5">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -659,19 +659,19 @@ export const MultiMonitorTradingConsole = () => {
       </div>
 
       {/* SINGLE MAIN MONITOR: MONITOR 3 — OPTIONS FLOW & INSTITUTIONAL HEATMAP */}
-      <div className="p-3 sm:p-4 rounded-2xl bg-[#050E1A] border border-slate-800 flex flex-col gap-3 relative overflow-hidden font-mono relative z-10">
+      <div className="p-3 sm:p-4 rounded-2xl bg-[#07110D] border border-[#1F3A2E] flex flex-col gap-3 relative overflow-hidden font-mono relative z-10">
         
         {/* Monitor Header */}
-        <div className="flex items-center justify-between text-xs border-b border-slate-800/80 pb-2">
+        <div className="flex items-center justify-between text-xs border-b border-[#1F3A2E]/80 pb-2">
           <div className="flex items-center gap-2">
             <span className="font-extrabold text-white">MONITOR 3 • OPTIONS FLOW & DERIVATIVES</span>
             <span className="px-2 py-0.5 rounded bg-amber-500/20 text-amber-400 text-[10px] font-bold">NIFTY 24800 CE/PE</span>
           </div>
-          <span className="text-cyan-400 font-black text-sm">PCR: 1.24 (Bullish)</span>
+          <span className="text-emerald-400 font-black text-sm">PCR: 1.24 (Bullish)</span>
         </div>
 
         {/* Dynamic Animated Volume Bars Visual */}
-        <div className="flex items-end justify-between h-36 sm:h-44 pt-4 px-2 gap-1.5 bg-[#030712]/80 rounded-xl p-3 border border-slate-800/60">
+        <div className="flex items-end justify-between h-36 sm:h-44 pt-4 px-2 gap-1.5 bg-[#030712]/80 rounded-xl p-3 border border-[#1F3A2E]/60">
           {[45, 62, 85, 30, 95, 70, 88, 40, 60, 100, 75, 90, 55, 80, 65, 92].map((val, idx) => (
             <div key={idx} className="flex-1 bg-slate-900/80 rounded-t h-full flex items-end">
               <div
@@ -707,7 +707,7 @@ export const MultiMonitorTradingConsole = () => {
  * Mini Feature Visual Cards for Pillars & Learning Categories
  */
 export const RiskManagementGraphic = () => (
-  <div className="p-4 rounded-xl bg-slate-900 text-white border border-slate-800 flex flex-col gap-2 font-mono text-xs">
+  <div className="p-4 rounded-xl bg-slate-900 text-white border border-[#1F3A2E] flex flex-col gap-2 font-mono text-xs">
     <div className="flex items-center justify-between text-slate-400 text-[11px] font-bold">
       <span>POSITION SIZING</span>
       <span className="text-emerald-400">1% RISK MODEL</span>
@@ -817,7 +817,7 @@ export const LiveMarketOrderDeskAnimation = () => {
       <div className="absolute inset-0 bg-financial-grid-dark opacity-25 pointer-events-none" />
 
       {/* Top Terminal Bar */}
-      <div className="flex items-center justify-between pb-3 border-b border-slate-800 relative z-10 font-mono">
+      <div className="flex items-center justify-between pb-3 border-b border-[#1F3A2E] relative z-10 font-mono">
         <div className="flex items-center gap-2">
           <span className="relative flex h-2.5 w-2.5">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -836,7 +836,7 @@ export const LiveMarketOrderDeskAnimation = () => {
 
       {/* Market Overview Ticker Cards */}
       <div className="grid grid-cols-3 gap-2 my-3 relative z-10 font-mono">
-        <div className="p-2 sm:p-2.5 rounded-xl bg-[#050E1A] border border-slate-800 flex flex-col">
+        <div className="p-2 sm:p-2.5 rounded-xl bg-[#07110D] border border-[#1F3A2E] flex flex-col">
           <span className="text-[9px] sm:text-[10px] text-slate-400 font-bold">NIFTY 50</span>
           <div className="flex items-center justify-between mt-0.5">
             <span className={`text-xs sm:text-sm font-black transition-colors ${priceDirection === 'UP' ? 'text-emerald-400' : 'text-rose-400'}`}>
@@ -846,7 +846,7 @@ export const LiveMarketOrderDeskAnimation = () => {
           </div>
         </div>
 
-        <div className="p-2 sm:p-2.5 rounded-xl bg-[#050E1A] border border-slate-800 flex flex-col">
+        <div className="p-2 sm:p-2.5 rounded-xl bg-[#07110D] border border-[#1F3A2E] flex flex-col">
           <span className="text-[9px] sm:text-[10px] text-slate-400 font-bold">BANK NIFTY</span>
           <div className="flex items-center justify-between mt-0.5">
             <span className="text-xs sm:text-sm font-black text-emerald-400">
@@ -856,19 +856,19 @@ export const LiveMarketOrderDeskAnimation = () => {
           </div>
         </div>
 
-        <div className="p-2 sm:p-2.5 rounded-xl bg-[#050E1A] border border-slate-800 flex flex-col">
+        <div className="p-2 sm:p-2.5 rounded-xl bg-[#07110D] border border-[#1F3A2E] flex flex-col">
           <span className="text-[9px] sm:text-[10px] text-slate-400 font-bold">INDIA VIX</span>
           <div className="flex items-center justify-between mt-0.5">
             <span className="text-xs sm:text-sm font-black text-amber-400">
               {vixPrice.toFixed(2)}
             </span>
-            <span className="text-[9px] font-bold text-cyan-400">-3.02%</span>
+            <span className="text-[9px] font-bold text-emerald-400">-3.02%</span>
           </div>
         </div>
       </div>
 
       {/* Main SVG Candlestick & Moving Average Canvas */}
-      <div className="relative w-full h-36 sm:h-44 bg-[#050E1A] rounded-xl border border-slate-800/90 p-2 overflow-hidden my-2 z-10">
+      <div className="relative w-full h-36 sm:h-44 bg-[#07110D] rounded-xl border border-[#1F3A2E]/90 p-2 overflow-hidden my-2 z-10">
         <svg className="w-full h-full overflow-visible" viewBox="0 0 400 160" preserveAspectRatio="none">
           {/* Background Grid Lines */}
           <line x1="0" y1="40" x2="400" y2="40" stroke="#1E293B" strokeWidth="1" strokeDasharray="3,3" />
@@ -952,7 +952,7 @@ export const LiveMarketOrderDeskAnimation = () => {
 
       {/* Live Order Flow Execution Feed */}
       <div className="flex flex-col gap-1.5 mt-3 relative z-10 font-mono">
-        <div className="flex items-center justify-between text-[10px] text-slate-400 font-bold border-b border-slate-800 pb-1">
+        <div className="flex items-center justify-between text-[10px] text-slate-400 font-bold border-b border-[#1F3A2E] pb-1">
           <span>LIVE ORDER FLOW EXECUTION</span>
           <span className="text-emerald-400">INSTANT MATCHING</span>
         </div>
@@ -961,7 +961,7 @@ export const LiveMarketOrderDeskAnimation = () => {
           {logs.map((log) => (
             <div
               key={log.id}
-              className="p-1.5 rounded-lg bg-[#050E1A] border border-slate-800/90 flex items-center justify-between animate-fly-in"
+              className="p-1.5 rounded-lg bg-[#07110D] border border-[#1F3A2E]/90 flex items-center justify-between animate-fly-in"
             >
               <div className="flex items-center gap-2">
                 <span

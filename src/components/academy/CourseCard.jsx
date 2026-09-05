@@ -3,7 +3,7 @@ import { PlayCircle, Clock, Star, Users, CheckCircle2, Lock, BookOpen, Sparkles,
 
 const CourseCard = ({ course, onSelectCourse }) => {
   return (
-    <div className="dark-trading-card overflow-hidden shadow-2xl flex flex-col group transition-all duration-300 hover:-translate-y-1.5 border border-slate-800 hover:border-amber-500/40">
+    <div className="bg-[#07110D] border-[#1F3A2E] overflow-hidden shadow-2xl flex flex-col group transition-all duration-300 hover:-translate-y-1.5 border border-[#1F3A2E] hover:border-amber-500/40">
       
       {/* Thumbnail Container */}
       <div className="relative aspect-video bg-slate-950 overflow-hidden cursor-pointer" onClick={() => onSelectCourse(course)}>
@@ -15,7 +15,7 @@ const CourseCard = ({ course, onSelectCourse }) => {
         <div className="absolute inset-0 bg-gradient-to-t from-[#060E1A] via-black/20 to-transparent opacity-90" />
 
         {/* Category Pill */}
-        <div className="absolute top-3 left-3 bg-[#0B192C]/90 backdrop-blur-md px-3 py-1 rounded-xl border border-slate-700 text-[10px] font-black text-amber-400 uppercase tracking-wider font-mono">
+        <div className="absolute top-3 left-3 bg-[#0D1B15]/90 backdrop-blur-md px-3 py-1 rounded-xl border border-slate-700 text-[10px] font-black text-amber-400 uppercase tracking-wider font-mono">
           {course.category}
         </div>
 
@@ -76,7 +76,7 @@ const CourseCard = ({ course, onSelectCourse }) => {
         </div>
 
         {/* Bottom CTA Row */}
-        <div className="pt-3 border-t border-slate-800 flex items-center justify-between gap-2 text-xs font-mono">
+        <div className="pt-3 border-t border-[#1F3A2E] flex items-center justify-between gap-2 text-xs font-mono">
           <div className="flex items-center gap-1.5 text-slate-400 font-bold text-[11px]">
             <BookOpen className="w-3.5 h-3.5 text-amber-400" />
             <span>{course.lessons?.length || course.modulesCount} Lessons</span>

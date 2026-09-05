@@ -51,7 +51,7 @@ const MarketChartVisual = ({ item }) => {
           </div>
           <div>
             <div className="flex flex-wrap items-center gap-1.5">
-              <h3 className="text-xs sm:text-lg font-black tracking-tight font-heading text-[#0B192C]">
+              <h3 className="text-xs sm:text-lg font-black tracking-tight font-heading text-[#0D1B15]">
                 {market} Visual Chart
               </h3>
               <span className="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300 text-[8.5px] sm:text-[10px] font-mono font-bold">
@@ -70,7 +70,7 @@ const MarketChartVisual = ({ item }) => {
             onClick={() => setChartType('candles')}
             className={`px-2 py-1 sm:px-3.5 sm:py-1.5 rounded-lg sm:rounded-xl text-[9.5px] sm:text-xs font-bold flex items-center gap-1 transition-all cursor-pointer ${
               chartType === 'candles'
-                ? 'bg-[#0B192C] text-amber-400 font-black shadow-md'
+                ? 'bg-[#0D1B15] text-amber-400 font-black shadow-md'
                 : 'text-slate-600 hover:text-slate-900'
             }`}
           >
@@ -82,7 +82,7 @@ const MarketChartVisual = ({ item }) => {
             onClick={() => setChartType('area')}
             className={`px-2 py-1 sm:px-3.5 sm:py-1.5 rounded-lg sm:rounded-xl text-[9.5px] sm:text-xs font-bold flex items-center gap-1 transition-all cursor-pointer ${
               chartType === 'area'
-                ? 'bg-[#0B192C] text-amber-400 font-black shadow-md'
+                ? 'bg-[#0D1B15] text-amber-400 font-black shadow-md'
                 : 'text-slate-600 hover:text-slate-900'
             }`}
           >
@@ -93,7 +93,7 @@ const MarketChartVisual = ({ item }) => {
       </div>
 
       {/* Main Visual Display Terminal Frame */}
-      <div className="w-full h-52 sm:h-72 relative bg-[#050E1A] p-1 sm:p-2.5 rounded-xl sm:rounded-2xl border border-slate-800 shadow-inner overflow-hidden">
+      <div className="w-full h-52 sm:h-72 relative bg-[#07110D] p-1 sm:p-2.5 rounded-xl sm:rounded-2xl border border-[#1F3A2E] shadow-inner overflow-hidden">
         <AnimatePresence mode="wait">
           {chartType === 'area' ? (
             <motion.div
@@ -122,7 +122,7 @@ const MarketChartVisual = ({ item }) => {
                   />
                   <Tooltip
                     contentStyle={{
-                      backgroundColor: '#050E1A',
+                      backgroundColor: '#07110D',
                       borderColor: '#F59E0B',
                       borderRadius: '0.5rem',
                       color: '#FFF',
@@ -178,7 +178,7 @@ const MarketChartVisual = ({ item }) => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.4 }}
-              className="w-full h-full flex items-end justify-between gap-1 px-1.5 sm:px-4 pt-4 pb-5 bg-slate-950/60 rounded-lg sm:rounded-xl border border-slate-800/80 relative overflow-hidden"
+              className="w-full h-full flex items-end justify-between gap-1 px-1.5 sm:px-4 pt-4 pb-5 bg-slate-950/60 rounded-lg sm:rounded-xl border border-[#1F3A2E]/80 relative overflow-hidden"
             >
               {/* Level Overlay Lines */}
               <div className="absolute inset-0 pointer-events-none px-1.5 sm:px-4 py-4 flex flex-col justify-between opacity-35">

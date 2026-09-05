@@ -60,7 +60,7 @@ const ContactPage = () => {
   ];
 
   return (
-    <div className="flex flex-col w-full bg-[#F8FAFC] min-h-screen text-slate-900 overflow-hidden">
+    <div className="flex flex-col w-full bg-[#07110D] text-[#E2E8F0] overflow-hidden selection:bg-[#F59E0B] selection:text-slate-950">
       <SeoHead
         title="Contact Elite Market Academy | Trading Education Enquiry"
         description="Get in touch with Elite Market Academy for course syllabus, enrollment details, and stock market education counselor support in Chennai, India."
@@ -69,29 +69,29 @@ const ContactPage = () => {
       />
       
       {/* 1. Header — [ULTRA-PREMIUM FULL VIEWPORT CONTACT HERO] */}
-      <section className="relative min-h-[calc(100vh-80px)] flex flex-col justify-between pt-8 pb-8 sm:pt-16 sm:pb-10 bg-[#050E1A] text-white border-b border-slate-800 overflow-hidden">
-        <div className="absolute inset-0 bg-[#050E1A]">
+      <section className="relative min-h-[calc(100vh-80px)] flex flex-col justify-between pt-8 pb-8 sm:pt-16 sm:pb-10 bg-[#07110D] text-white border-b border-[#1F3A2E] overflow-hidden">
+        <div className="absolute inset-0 bg-[#07110D]">
           <img src={abstractFinanceBg} alt="" aria-hidden="true" className="w-full h-full object-cover object-center scale-105 blur-md opacity-25" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#050E1A] via-[#0B192C]/95 to-[#050E1A]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#07110D] via-[#0D1B15]/95 to-[#07110D]" />
         </div>
         <div className="absolute inset-0 bg-financial-grid-dark opacity-30 pointer-events-none" />
-        <div className="absolute top-0 right-10 w-[500px] h-[500px] bg-amber-500/15 rounded-full blur-[140px] pointer-events-none animate-blob-slow" />
+        <div className="absolute top-0 right-10 w-[500px] h-[500px] bg-[#FFFBEB]0/15 rounded-full blur-[140px] pointer-events-none " />
         
-        <div className="max-w-4xl mx-auto px-3.5 sm:px-6 text-center flex flex-col items-center gap-4 sm:gap-6 relative z-10 animate-landing-up my-auto w-full">
-          <div className="inline-flex items-center gap-2 sm:gap-3 px-3 py-1.5 sm:px-4.5 sm:py-2 rounded-full futuristic-glass-card text-amber-400 text-[10px] sm:text-xs font-extrabold uppercase tracking-widest badge-3d shadow-xl w-max border border-amber-500/30">
+        <div className="max-w-4xl mx-auto px-3.5 sm:px-6 text-center flex flex-col items-center gap-4 sm:gap-6 relative z-10 my-auto w-full">
+          <div className="inline-flex items-center gap-2 sm:gap-3 px-3 py-1.5 sm:px-4.5 sm:py-2 rounded-full text-[#F59E0B] text-[10px] sm:text-xs font-extrabold uppercase tracking-widest shadow-xl w-max border border-[#F59E0B]/30">
             <span className="relative flex h-2 w-2 sm:h-2.5 sm:w-2.5 shrink-0">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 sm:h-2.5 sm:w-2.5 bg-amber-500"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 sm:h-2.5 sm:w-2.5 bg-[#FFFBEB]0"></span>
             </span>
-            <Mail className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400 shrink-0" />
+            <Mail className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#F59E0B] shrink-0" />
             <span>GET IN TOUCH</span>
           </div>
 
-          <h1 className="text-2xl xs:text-3xl sm:text-5xl lg:text-6xl font-black text-white font-heading tracking-tight leading-[1.15]">
-            Contact <span className="gold-gradient-text animate-gradient-text">Elite Market Academy</span>
+          <h1 className="text-2xl xs:text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white font-heading tracking-tight leading-[1.15]">
+            Contact <span className="bg-gradient-to-r from-[#F59E0B] via-[#FBBF24] to-[#D4AF37] bg-clip-text text-transparent ">Elite Market Academy</span>
           </h1>
 
-          <p className="text-xs sm:text-base text-slate-100 font-semibold leading-relaxed p-4 sm:p-5 rounded-2xl bg-[#0B192C]/95 border border-slate-700/80 shadow-2xl backdrop-blur-md max-w-2xl">
+          <p className="text-xs sm:text-base text-slate-100 font-semibold leading-relaxed p-4 sm:p-5 rounded-2xl bg-[#0D1B15]/95 border border-[#1F3A2E] shadow-2xl backdrop-blur-md max-w-2xl">
             Have questions about our financial market education programs, batch shifts, or 1-year free trading journal access? Reach out to our academic support team.
           </p>
 
@@ -100,12 +100,12 @@ const ContactPage = () => {
               <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-400 shrink-0" />
               <span>15-Min Response SLA</span>
             </div>
-            <div className="px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-slate-900/90 border border-amber-500/30 text-amber-400 text-[10.5px] sm:text-xs font-mono font-bold flex items-center gap-1.5 sm:gap-2 shadow-lg backdrop-blur-md">
-              <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400 shrink-0" />
+            <div className="px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-slate-900/90 border border-[#F59E0B]/30 text-[#F59E0B] text-[10.5px] sm:text-xs font-mono font-bold flex items-center gap-1.5 sm:gap-2 shadow-lg backdrop-blur-md">
+              <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#F59E0B] shrink-0" />
               <span>Direct Counselor Access</span>
             </div>
-            <div className="px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-slate-900/90 border border-cyan-500/30 text-cyan-400 text-[10.5px] sm:text-xs font-mono font-bold flex items-center gap-1.5 sm:gap-2 shadow-lg backdrop-blur-md">
-              <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-cyan-400 shrink-0" />
+            <div className="px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-slate-900/90 border border-emerald-500/30 text-emerald-400 text-[10.5px] sm:text-xs font-mono font-bold flex items-center gap-1.5 sm:gap-2 shadow-lg backdrop-blur-md">
+              <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-400 shrink-0" />
               <span>Morning & Evening Shifts</span>
             </div>
           </div>
@@ -114,7 +114,7 @@ const ContactPage = () => {
         {/* Scroll Indicator */}
         <div className="relative z-10 flex flex-col items-center gap-2 text-center pt-4 animate-bounce cursor-pointer">
           <span className="text-[9.5px] sm:text-[10px] font-mono font-bold uppercase tracking-widest text-amber-400/90">SCROLL TO SUBMIT ENQUIRY</span>
-          <div className="w-4 h-7 sm:w-5 sm:h-8 rounded-full border-2 border-amber-500/40 flex items-start justify-center p-1">
+          <div className="w-4 h-7 sm:w-5 sm:h-8 rounded-full border-2 border-[#F59E0B]/40 flex items-start justify-center p-1">
             <div className="w-1 h-2 sm:h-2.5 rounded-full bg-amber-400" />
           </div>
         </div>
@@ -130,7 +130,7 @@ const ContactPage = () => {
             <ScrollReveal animation="slide-left" className="lg:col-span-5 flex flex-col gap-6">
               <div className="p-5 sm:p-8 rounded-2xl sm:rounded-3xl bg-white border border-slate-200/90 shadow-2xs flex flex-col gap-5 sm:gap-6">
                 <div className="flex flex-col gap-1.5 sm:gap-2 border-b border-slate-100 pb-3.5 sm:pb-4">
-                  <h2 className="text-xl sm:text-2xl font-black text-[#0B192C] font-heading">
+                  <h2 className="text-xl sm:text-2xl font-extrabold text-[#0D1B15] font-heading">
                     Academy Information
                   </h2>
                   <p className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed">
@@ -141,14 +141,14 @@ const ContactPage = () => {
                 <div className="flex flex-col gap-4 sm:gap-5 pt-1 sm:pt-2">
                   {contactItems.map(({ Icon, label, value }) => (
                     <div key={label} className="flex items-center gap-3 sm:gap-4">
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-amber-50 text-amber-600 border border-amber-200 flex items-center justify-center shrink-0">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-[#FFFBEB] text-[#D97706] border border-[#FDE68A] flex items-center justify-center shrink-0">
                         <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
                       </div>
                       <div className="flex flex-col min-w-0">
-                        <span className="text-[9.5px] sm:text-[10px] font-bold text-amber-700 uppercase tracking-wider font-mono">
+                        <span className="text-[9.5px] sm:text-[10px] font-bold text-[#D97706] uppercase tracking-wider font-mono">
                           {label}
                         </span>
-                        <span className="text-xs sm:text-sm font-bold text-[#0B192C] truncate">{value}</span>
+                        <span className="text-xs sm:text-sm font-bold text-[#0D1B15] truncate">{value}</span>
                       </div>
                     </div>
                   ))}
@@ -169,7 +169,7 @@ const ContactPage = () => {
                     <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-200 flex items-center justify-center">
                       <CheckCircle2 className="w-7 h-7 sm:w-8 sm:h-8" />
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-black text-[#0B192C] font-heading">
+                    <h3 className="text-xl sm:text-2xl font-extrabold text-[#0D1B15] font-heading">
                       Thank You!
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-600 font-medium max-w-md">
@@ -184,7 +184,7 @@ const ContactPage = () => {
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="flex flex-col gap-4 sm:gap-5">
-                    <h2 className="text-xl sm:text-2xl font-black text-[#0B192C] font-heading">
+                    <h2 className="text-xl sm:text-2xl font-extrabold text-[#0D1B15] font-heading">
                       Request Course Information
                     </h2>
 
@@ -197,7 +197,7 @@ const ContactPage = () => {
                           placeholder="Enter your full name"
                           value={formData.fullName}
                           onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                          className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-slate-50 border border-slate-200 text-xs font-medium text-slate-900 placeholder-slate-400 focus:outline-none focus:border-amber-500 transition-all"
+                          className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-slate-50 border border-slate-200 text-xs font-medium text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#F59E0B] transition-all"
                         />
                       </div>
                       <div className="flex flex-col gap-1 sm:gap-1.5">
@@ -208,7 +208,7 @@ const ContactPage = () => {
                           placeholder="Enter 10-digit mobile number"
                           value={formData.mobileNumber}
                           onChange={(e) => setFormData({ ...formData, mobileNumber: e.target.value })}
-                          className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-slate-50 border border-slate-200 text-xs font-medium text-slate-900 placeholder-slate-400 focus:outline-none focus:border-amber-500 transition-all"
+                          className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-slate-50 border border-slate-200 text-xs font-medium text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#F59E0B] transition-all"
                         />
                       </div>
                     </div>
@@ -222,7 +222,7 @@ const ContactPage = () => {
                           placeholder="name@example.com"
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-slate-50 border border-slate-200 text-xs font-medium text-slate-900 placeholder-slate-400 focus:outline-none focus:border-amber-500 transition-all"
+                          className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-slate-50 border border-slate-200 text-xs font-medium text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#F59E0B] transition-all"
                         />
                       </div>
                       <div className="flex flex-col gap-1 sm:gap-1.5">
@@ -230,7 +230,7 @@ const ContactPage = () => {
                         <select
                           value={formData.interestedCourse}
                           onChange={(e) => setFormData({ ...formData, interestedCourse: e.target.value })}
-                          className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-slate-50 border border-slate-200 text-xs font-medium text-slate-900 focus:outline-none focus:border-amber-500 transition-all cursor-pointer"
+                          className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-slate-50 border border-slate-200 text-xs font-medium text-slate-900 focus:outline-none focus:border-[#F59E0B] transition-all cursor-pointer"
                         >
                           {COURSES.map((c) => <option key={c.id} value={c.title}>{c.title}</option>)}
                         </select>
@@ -243,7 +243,7 @@ const ContactPage = () => {
                         <select
                           value={formData.tradingExperience}
                           onChange={(e) => setFormData({ ...formData, tradingExperience: e.target.value })}
-                          className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-slate-50 border border-slate-200 text-xs font-medium text-slate-900 focus:outline-none focus:border-amber-500 transition-all cursor-pointer"
+                          className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-slate-50 border border-slate-200 text-xs font-medium text-slate-900 focus:outline-none focus:border-[#F59E0B] transition-all cursor-pointer"
                         >
                           <option value="Beginner (0-6 months)">Beginner (0-6 months)</option>
                           <option value="Intermediate (6-2 years)">Intermediate (6-2 years)</option>
@@ -255,7 +255,7 @@ const ContactPage = () => {
                         <select
                           value={formData.preferredContact}
                           onChange={(e) => setFormData({ ...formData, preferredContact: e.target.value })}
-                          className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-slate-50 border border-slate-200 text-xs font-medium text-slate-900 focus:outline-none focus:border-amber-500 transition-all cursor-pointer"
+                          className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-slate-50 border border-slate-200 text-xs font-medium text-slate-900 focus:outline-none focus:border-[#F59E0B] transition-all cursor-pointer"
                         >
                           <option value="WhatsApp">WhatsApp</option>
                           <option value="Phone Call">Phone Call</option>
@@ -271,7 +271,7 @@ const ContactPage = () => {
                         placeholder="Tell us what you would like to learn..."
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-slate-50 border border-slate-200 text-xs font-medium text-slate-900 placeholder-slate-400 focus:outline-none focus:border-amber-500 transition-all resize-none"
+                        className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-slate-50 border border-slate-200 text-xs font-medium text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#F59E0B] transition-all resize-none"
                       />
                     </div>
 
@@ -284,7 +284,7 @@ const ContactPage = () => {
                     <button
                       type="submit"
                       disabled={loading}
-                      className={`w-full py-3.5 sm:py-4 rounded-xl bg-[#0B192C] hover:bg-[#1E3A8A] text-amber-400 font-black text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md active:scale-95 transition-all cursor-pointer mt-1 border border-amber-500/30 ${loading ? 'opacity-70 cursor-not-allowed' : ''}`}
+                      className={`w-full py-3.5 sm:py-4 rounded-xl bg-[#0D1B15] hover:bg-[#12261E] text-[#F59E0B] font-extrabold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md active:scale-95 transition-all cursor-pointer mt-1 border border-[#F59E0B]/30 ${loading ? 'opacity-70 cursor-not-allowed' : ''}`}
                     >
                       <span>{loading ? 'Sending Message...' : 'Request Course Information'}</span>
                       <Send className="w-3.5 h-3.5 sm:w-4 sm:h-4" />

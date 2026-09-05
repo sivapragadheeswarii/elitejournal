@@ -23,7 +23,7 @@ const STATS = [
     value: '1 : 2.5',
     label: 'Risk-to-Reward Model',
     sub: 'Institutional Risk Discipline',
-    color: 'text-cyan-400',
+    color: 'text-emerald-400',
     borderColor: 'hover:border-cyan-500/50'
   },
   {
@@ -38,7 +38,7 @@ const STATS = [
 
 const TradingStatsCounter = () => {
   return (
-    <div className="w-full bg-[#050E1A] border-y border-slate-800/90 py-12 px-4 sm:px-6 relative overflow-hidden">
+    <div className="w-full bg-[#07110D] border-y border-[#1F3A2E]/90 py-12 px-4 sm:px-6 relative overflow-hidden">
       
       {/* Background Grid Accent */}
       <div className="absolute inset-0 bg-financial-grid-dark opacity-20 pointer-events-none" />
@@ -51,10 +51,10 @@ const TradingStatsCounter = () => {
             return (
               <div
                 key={idx}
-                className={`p-6 rounded-2xl bg-[#0B192C]/80 border border-slate-800 transition-all duration-300 transform hover:-translate-y-1 shadow-lg ${stat.borderColor} flex flex-col gap-3 group`}
+                className={`p-6 rounded-2xl bg-[#0D1B15]/80 border border-[#1F3A2E] transition-all duration-300 transform hover:-translate-y-1 shadow-lg ${stat.borderColor} flex flex-col gap-3 group`}
               >
                 <div className="flex items-center justify-between">
-                  <div className={`w-12 h-12 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center ${stat.color} group-hover:scale-110 transition-transform`}>
+                  <div className={`w-12 h-12 rounded-xl bg-slate-900 border border-[#1F3A2E] flex items-center justify-center ${stat.color} group-hover:scale-110 transition-transform`}>
                     <IconComponent className="w-6 h-6" />
                   </div>
                   <span className="text-[10px] font-mono text-slate-500 font-bold uppercase tracking-widest">

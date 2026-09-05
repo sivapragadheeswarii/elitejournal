@@ -90,7 +90,7 @@ const FAQPage = () => {
   ];
 
   return (
-    <div className="flex flex-col w-full bg-[#F8FAFC] min-h-screen text-slate-900 overflow-hidden">
+    <div className="flex flex-col w-full bg-[#07110D] text-[#E2E8F0] overflow-hidden selection:bg-[#F59E0B] selection:text-slate-950">
       <SeoHead
         title="Stock Market Education FAQs | Elite Market Academy"
         description="Frequently asked questions about Elite Market Academy, stock market courses, technical analysis, options trading, batch shifts, risk management, and enrollment."
@@ -99,35 +99,35 @@ const FAQPage = () => {
       />
 
       {/* 1. Header — [FULL-VIEWPORT 12-COLUMN ULTRA-PREMIUM FAQ HERO] */}
-      <section className="relative min-h-[calc(100vh-80px)] flex flex-col justify-between pt-8 pb-8 sm:pt-14 sm:pb-10 bg-[#050E1A] text-white border-b border-slate-800 overflow-hidden">
-        <div className="absolute inset-0 bg-[#050E1A]">
+      <section className="relative min-h-[calc(100vh-80px)] flex flex-col justify-between pt-8 pb-8 sm:pt-14 sm:pb-10 bg-[#07110D] text-white border-b border-[#1F3A2E] overflow-hidden">
+        <div className="absolute inset-0 bg-[#07110D]">
           <img src={heroEmaCh} alt="" aria-hidden="true" className="w-full h-full object-cover object-center scale-105 blur-md opacity-25" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#050E1A] via-[#0B192C]/95 to-[#050E1A]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#07110D] via-[#0D1B15]/95 to-[#07110D]" />
         </div>
         <div className="absolute inset-0 bg-financial-grid-dark opacity-30 pointer-events-none" />
-        <div className="absolute top-0 right-10 w-[600px] h-[600px] bg-amber-500/15 rounded-full blur-[140px] pointer-events-none animate-blob-slow" />
-        <div className="absolute bottom-0 left-10 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none animate-blob-reverse" />
+        <div className="absolute top-0 right-10 w-[600px] h-[600px] bg-[#FFFBEB]0/15 rounded-full blur-[140px] pointer-events-none " />
+        <div className="absolute bottom-0 left-10 w-[500px] h-[500px] bg-emerald-500/5 rounded-full blur-[120px] pointer-events-none " />
 
         <div className="max-w-7xl mx-auto px-3.5 sm:px-6 relative z-10 text-left my-auto w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             {/* Left Header Column (7 Cols) */}
-            <div className="lg:col-span-7 flex flex-col gap-4 sm:gap-6 animate-landing-up">
-              <div className="inline-flex items-center gap-2 sm:gap-3 px-3 py-1.5 sm:px-4.5 sm:py-2 rounded-full futuristic-glass-card text-amber-400 text-[10px] sm:text-xs font-extrabold uppercase tracking-widest badge-3d shadow-xl w-max border border-amber-500/30">
+            <div className="lg:col-span-7 flex flex-col gap-4 sm:gap-6 ">
+              <div className="inline-flex items-center gap-2 sm:gap-3 px-3 py-1.5 sm:px-4.5 sm:py-2 rounded-full text-[#F59E0B] text-[10px] sm:text-xs font-extrabold uppercase tracking-widest shadow-xl w-max border border-[#F59E0B]/30">
                 <span className="relative flex h-2 w-2 sm:h-2.5 sm:w-2.5 shrink-0">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 sm:h-2.5 sm:w-2.5 bg-amber-500"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 sm:h-2.5 sm:w-2.5 bg-[#FFFBEB]0"></span>
                 </span>
-                <HelpCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400 shrink-0" />
+                <HelpCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#F59E0B] shrink-0" />
                 <span>SUPPORT & KNOWLEDGE BASE</span>
               </div>
 
-              <h1 className="text-2xl xs:text-3xl sm:text-5xl lg:text-6xl font-black text-white font-heading tracking-tight leading-[1.15]">
+              <h1 className="text-2xl xs:text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white font-heading tracking-tight leading-[1.15]">
                 Frequently Asked <br className="hidden sm:inline" />
-                <span className="gold-gradient-text animate-gradient-text">Questions</span>
+                <span className="bg-gradient-to-r from-[#F59E0B] via-[#FBBF24] to-[#D4AF37] bg-clip-text text-transparent ">Questions</span>
               </h1>
 
-              <p className="text-xs sm:text-base text-slate-100 font-semibold leading-relaxed p-4 sm:p-5 rounded-2xl bg-[#0B192C]/95 border border-slate-700/80 shadow-2xl backdrop-blur-md max-w-xl">
+              <p className="text-xs sm:text-base text-slate-100 font-semibold leading-relaxed p-4 sm:p-5 rounded-2xl bg-[#0D1B15]/95 border border-[#1F3A2E] shadow-2xl backdrop-blur-md max-w-xl">
                 Find instant answers to common questions about Elite Market Academy, our education curriculum, batch shift timings, risk policies, and student enrollment.
               </p>
 
@@ -135,7 +135,7 @@ const FAQPage = () => {
               <div className="flex flex-wrap items-center gap-2.5 pt-1">
                 <button
                   onClick={() => setIsEnquiryOpen(true)}
-                  className="px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs transition-all shadow-lg flex items-center gap-2 cursor-pointer"
+                  className="px-4 py-2.5 rounded-xl bg-[#FFFBEB]0 hover:brightness-110 text-slate-950 font-extrabold text-xs transition-all shadow-lg flex items-center gap-2 cursor-pointer"
                 >
                   <MessageSquare className="w-4 h-4" />
                   <span>Ask a Question</span>
@@ -153,14 +153,14 @@ const FAQPage = () => {
             </div>
 
             {/* Right Column (5 Cols) — Interactive Knowledge Hub Visual Engine */}
-            <div className="lg:col-span-5 relative animate-scale-in">
-              <div className="w-full rounded-2xl sm:rounded-3xl bg-[#030712] border border-amber-500/30 p-4 sm:p-6 text-white shadow-2xl relative overflow-hidden group">
-                <div className="absolute -top-10 -right-10 w-44 h-44 bg-amber-500/15 rounded-full blur-3xl pointer-events-none animate-pulse" />
+            <div className="lg:col-span-5 relative ">
+              <div className="w-full rounded-2xl sm:rounded-3xl bg-[#030712] border border-[#F59E0B]/30 p-4 sm:p-6 text-white shadow-2xl relative overflow-hidden group">
+                <div className="absolute -top-10 -right-10 w-44 h-44 bg-[#FFFBEB]0/15 rounded-full blur-3xl pointer-events-none animate-pulse" />
                 <div className="absolute -bottom-10 -left-10 w-44 h-44 bg-cyan-500/15 rounded-full blur-3xl pointer-events-none" />
                 <div className="absolute inset-0 bg-financial-grid-dark opacity-30 pointer-events-none" />
 
                 {/* Header */}
-                <div className="flex items-center justify-between pb-3 border-b border-slate-800 relative z-10 font-mono">
+                <div className="flex items-center justify-between pb-3 border-b border-[#1F3A2E] relative z-10 font-mono">
                   <div className="flex items-center gap-2">
                     <span className="relative flex h-2.5 w-2.5">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -176,8 +176,8 @@ const FAQPage = () => {
                 {/* 4 Feature Cards Grid */}
                 <div className="grid grid-cols-1 gap-2.5 my-4 relative z-10 font-sans">
                   
-                  <div className="p-3 rounded-xl bg-[#050E1A] border border-slate-800 flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0 border border-amber-500/20">
+                  <div className="p-3 rounded-xl bg-[#07110D] border border-[#1F3A2E] flex items-center gap-3">
+                    <div className="w-9 h-9 rounded-lg bg-[#FFFBEB]0/10 text-[#F59E0B] flex items-center justify-center shrink-0 border border-[#F59E0B]/20">
                       <GraduationCap className="w-5 h-5" />
                     </div>
                     <div className="flex flex-col text-left min-w-0">
@@ -186,7 +186,7 @@ const FAQPage = () => {
                     </div>
                   </div>
 
-                  <div className="p-3 rounded-xl bg-[#050E1A] border border-slate-800 flex items-center gap-3">
+                  <div className="p-3 rounded-xl bg-[#07110D] border border-[#1F3A2E] flex items-center gap-3">
                     <div className="w-9 h-9 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 border border-emerald-500/20">
                       <ShieldCheck className="w-5 h-5" />
                     </div>
@@ -196,8 +196,8 @@ const FAQPage = () => {
                     </div>
                   </div>
 
-                  <div className="p-3 rounded-xl bg-[#050E1A] border border-slate-800 flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center shrink-0 border border-cyan-500/20">
+                  <div className="p-3 rounded-xl bg-[#07110D] border border-[#1F3A2E] flex items-center gap-3">
+                    <div className="w-9 h-9 rounded-lg bg-emerald-500/5 text-emerald-400 flex items-center justify-center shrink-0 border border-cyan-500/20">
                       <BookOpen className="w-5 h-5" />
                     </div>
                     <div className="flex flex-col text-left min-w-0">
@@ -206,7 +206,7 @@ const FAQPage = () => {
                     </div>
                   </div>
 
-                  <div className="p-3 rounded-xl bg-[#050E1A] border border-slate-800 flex items-center gap-3">
+                  <div className="p-3 rounded-xl bg-[#07110D] border border-[#1F3A2E] flex items-center gap-3">
                     <div className="w-9 h-9 rounded-lg bg-purple-500/10 text-purple-400 flex items-center justify-center shrink-0 border border-purple-500/20">
                       <Clock className="w-5 h-5" />
                     </div>
@@ -219,11 +219,11 @@ const FAQPage = () => {
                 </div>
 
                 {/* Footer Callout */}
-                <div className="p-3 rounded-xl bg-amber-500/10 border border-amber-500/30 text-slate-200 text-left text-xs font-medium flex items-center justify-between">
+                <div className="p-3 rounded-xl bg-[#FFFBEB]0/10 border border-[#F59E0B]/30 text-slate-200 text-left text-xs font-medium flex items-center justify-between">
                   <span>Need specialized advice?</span>
                   <button
                     onClick={() => setIsEnquiryOpen(true)}
-                    className="text-amber-400 font-bold hover:underline flex items-center gap-1 cursor-pointer"
+                    className="text-[#F59E0B] font-bold hover:underline flex items-center gap-1 cursor-pointer"
                   >
                     Enquire Now →
                   </button>
@@ -237,7 +237,7 @@ const FAQPage = () => {
         {/* Scroll Indicator */}
         <div className="relative z-10 flex flex-col items-center gap-2 text-center pt-2 animate-bounce cursor-pointer">
           <span className="text-[9.5px] sm:text-[10px] font-mono font-bold uppercase tracking-widest text-amber-400/90">SCROLL TO EXPLORE FAQS</span>
-          <div className="w-4 h-7 sm:w-5 sm:h-8 rounded-full border-2 border-amber-500/40 flex items-start justify-center p-1">
+          <div className="w-4 h-7 sm:w-5 sm:h-8 rounded-full border-2 border-[#F59E0B]/40 flex items-start justify-center p-1">
             <div className="w-1 h-2 sm:h-2.5 rounded-full bg-amber-400" />
           </div>
         </div>
@@ -256,7 +256,7 @@ const FAQPage = () => {
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-4 py-2 rounded-xl text-xs font-extrabold transition-all cursor-pointer shrink-0 ${
                   selectedCategory === cat
-                    ? 'bg-[#0B192C] text-amber-400 shadow-md ring-2 ring-amber-400/20'
+                    ? 'bg-[#0D1B15] text-[#F59E0B] shadow-md ring-2 ring-amber-400/20'
                     : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'
                 }`}
               >
@@ -271,7 +271,7 @@ const FAQPage = () => {
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery('')}
-                className="text-amber-600 hover:underline font-extrabold cursor-pointer"
+                className="text-[#D97706] hover:underline font-extrabold cursor-pointer"
               >
                 Clear Search Filter
               </button>
@@ -291,7 +291,7 @@ const FAQPage = () => {
                   setSearchQuery('');
                   setSelectedCategory('All');
                 }}
-                className="px-5 py-2.5 rounded-xl bg-[#0B192C] text-amber-400 font-bold text-xs"
+                className="px-5 py-2.5 rounded-xl bg-[#0D1B15] text-[#F59E0B] font-bold text-xs"
               >
                 Reset Search Filters
               </button>
@@ -303,18 +303,18 @@ const FAQPage = () => {
                 return (
                   <ScrollReveal key={idx} animation="fade-up" delay={idx * 40}>
                     <div className={`rounded-2xl bg-white border transition-all duration-200 shadow-xs overflow-hidden ${
-                      isOpen ? 'border-amber-500 ring-2 ring-amber-500/10' : 'border-slate-200/90 hover:border-amber-400'
+                      isOpen ? 'border-[#F59E0B] ring-2 ring-amber-500/10' : 'border-slate-200/90 hover:border-[#F59E0B]'
                     }`}>
                       <button
                         onClick={() => toggle(idx)}
-                        className="w-full p-4 sm:p-6 text-left font-black text-[#0B192C] font-heading text-xs sm:text-base flex items-center justify-between gap-3 sm:gap-4 cursor-pointer hover:bg-slate-50 transition-colors"
+                        className="w-full p-4 sm:p-6 text-left font-extrabold text-[#0D1B15] font-heading text-xs sm:text-base flex items-center justify-between gap-3 sm:gap-4 cursor-pointer hover:bg-slate-50 transition-colors"
                       >
                         <span className="flex items-center gap-3">
-                          <HelpCircle className={`w-4 h-4 sm:w-5 sm:h-5 shrink-0 ${isOpen ? 'text-amber-600' : 'text-slate-400'}`} />
+                          <HelpCircle className={`w-4 h-4 sm:w-5 sm:h-5 shrink-0 ${isOpen ? 'text-[#D97706]' : 'text-slate-400'}`} />
                           <span className="leading-snug">{faq.question}</span>
                         </span>
                         <ChevronDown
-                          className={`w-4 h-4 sm:w-5 sm:h-5 text-slate-400 shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180 text-amber-600' : ''}`}
+                          className={`w-4 h-4 sm:w-5 sm:h-5 text-slate-400 shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180 text-[#D97706]' : ''}`}
                         />
                       </button>
 
@@ -331,10 +331,10 @@ const FAQPage = () => {
           )}
 
           {/* Bottom Help Banner */}
-          <div className="mt-12 p-6 sm:p-8 rounded-3xl bg-[#0B192C] text-white flex flex-col sm:flex-row items-center justify-between gap-6 border border-slate-800 shadow-xl text-left">
+          <div className="mt-12 p-6 sm:p-8 rounded-3xl bg-[#0D1B15] text-white flex flex-col sm:flex-row items-center justify-between gap-6 border border-[#1F3A2E] shadow-xl text-left">
             <div className="flex flex-col gap-1">
-              <span className="text-amber-400 font-mono text-xs font-bold uppercase tracking-wider">STILL HAVE QUESTIONS?</span>
-              <h3 className="text-xl sm:text-2xl font-black font-heading">We’re Here to Guide Your Learning</h3>
+              <span className="text-[#F59E0B] font-mono text-xs font-bold uppercase tracking-wider">STILL HAVE QUESTIONS?</span>
+              <h3 className="text-xl sm:text-2xl font-extrabold font-heading">We’re Here to Guide Your Learning</h3>
               <p className="text-xs sm:text-sm text-slate-300 font-medium max-w-lg">
                 Our education advisors can help you choose the right course, understand batch timings, or guide you through enrollment.
               </p>
@@ -342,7 +342,7 @@ const FAQPage = () => {
             <div className="flex items-center gap-3 shrink-0 w-full sm:w-auto">
               <button
                 onClick={() => setIsEnquiryOpen(true)}
-                className="w-full sm:w-auto px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs transition-all shadow-md text-center cursor-pointer"
+                className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#FFFBEB]0 hover:brightness-110 text-slate-950 font-extrabold text-xs transition-all shadow-md text-center cursor-pointer"
               >
                 Request Course Info
               </button>

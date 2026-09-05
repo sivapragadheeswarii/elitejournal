@@ -44,32 +44,32 @@ const EnquiryModal = ({ isOpen, onClose }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-950/80 backdrop-blur-sm">
-      <div className="relative w-full max-w-xl max-h-[90vh] flex flex-col bg-white rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden border border-slate-200">
+      <div className="relative w-full max-w-xl max-h-[92vh] flex flex-col bg-white rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden border border-slate-200">
         
         {/* Header */}
-        <div className="bg-[#0B192C] px-5 sm:px-6 py-4 sm:py-5 text-white flex items-center justify-between shrink-0">
+        <div className="bg-[#0D1B15] px-4 sm:px-6 py-3.5 sm:py-5 text-white flex items-center justify-between shrink-0 border-b border-[#1F3A2E]">
           <div className="flex flex-col text-left">
-            <span className="text-[10px] sm:text-xs font-bold text-amber-400 uppercase tracking-widest">
+            <span className="text-[10px] sm:text-xs font-bold text-[#F59E0B] uppercase tracking-widest">
               Elite Market Academy
             </span>
             <h3 className="text-base sm:text-lg font-black font-heading">Request Course Information</h3>
           </div>
           <button
             onClick={onClose}
-            className="p-2 rounded-xl bg-slate-800 text-slate-300 hover:text-white transition-colors active:scale-95"
+            className="p-2 rounded-xl bg-slate-800 text-slate-300 hover:text-white transition-colors active:scale-95 cursor-pointer"
           >
             <X className="w-4 sm:w-5 h-4 sm:h-5" />
           </button>
         </div>
 
         {/* Content */}
-        <div className="p-5 sm:p-8 overflow-y-auto">
+        <div className="p-4 sm:p-8 overflow-y-auto">
           {submitted ? (
             <div className="flex flex-col items-center justify-center gap-4 py-8 text-center">
               <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center">
                 <CheckCircle2 className="w-10 h-10" />
               </div>
-              <h4 className="text-xl font-black text-[#0B192C]">Thank You!</h4>
+              <h4 className="text-xl font-black text-[#0D1B15]">Thank You!</h4>
               <p className="text-sm text-slate-600 font-medium max-w-md">
                 Our team will contact you with the requested course information shortly.
               </p>
@@ -78,7 +78,7 @@ const EnquiryModal = ({ isOpen, onClose }) => {
                   setSubmitted(false);
                   onClose();
                 }}
-                className="mt-2 px-6 py-2.5 rounded-xl bg-[#0B192C] text-amber-400 font-bold text-xs"
+                className="mt-2 px-6 py-2.5 rounded-xl bg-[#0D1B15] text-amber-400 font-bold text-xs"
               >
                 Close Window
               </button>
@@ -95,7 +95,7 @@ const EnquiryModal = ({ isOpen, onClose }) => {
                     placeholder="Enter your full name"
                     value={formData.fullName}
                     onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                    className="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2 text-xs font-medium text-slate-900 focus:ring-2 focus:ring-[#0B192C] outline-none"
+                    className="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2 text-xs font-medium text-slate-900 focus:ring-2 focus:ring-[#0D1B15] outline-none"
                   />
                 </div>
 
@@ -107,7 +107,7 @@ const EnquiryModal = ({ isOpen, onClose }) => {
                     placeholder="Enter 10-digit mobile number"
                     value={formData.mobileNumber}
                     onChange={(e) => setFormData({ ...formData, mobileNumber: e.target.value })}
-                    className="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2 text-xs font-medium text-slate-900 focus:ring-2 focus:ring-[#0B192C] outline-none"
+                    className="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2 text-xs font-medium text-slate-900 focus:ring-2 focus:ring-[#0D1B15] outline-none"
                   />
                 </div>
               </div>
@@ -121,7 +121,7 @@ const EnquiryModal = ({ isOpen, onClose }) => {
                     placeholder="name@example.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2 text-xs font-medium text-slate-900 focus:ring-2 focus:ring-[#0B192C] outline-none"
+                    className="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2 text-xs font-medium text-slate-900 focus:ring-2 focus:ring-[#0D1B15] outline-none"
                   />
                 </div>
 
@@ -130,7 +130,7 @@ const EnquiryModal = ({ isOpen, onClose }) => {
                   <select
                     value={formData.interestedCourse}
                     onChange={(e) => setFormData({ ...formData, interestedCourse: e.target.value })}
-                    className="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2 text-xs font-medium text-slate-900 focus:ring-2 focus:ring-[#0B192C] outline-none"
+                    className="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2 text-xs font-medium text-slate-900 focus:ring-2 focus:ring-[#0D1B15] outline-none"
                   >
                     {COURSES.map((c) => (
                       <option key={c.id} value={c.title}>{c.title}</option>
@@ -145,7 +145,7 @@ const EnquiryModal = ({ isOpen, onClose }) => {
                   <select
                     value={formData.tradingExperience}
                     onChange={(e) => setFormData({ ...formData, tradingExperience: e.target.value })}
-                    className="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2 text-xs font-medium text-slate-900 focus:ring-2 focus:ring-[#0B192C] outline-none"
+                    className="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2 text-xs font-medium text-slate-900 focus:ring-2 focus:ring-[#0D1B15] outline-none"
                   >
                     <option value="Beginner (0-6 months)">Beginner (0-6 months)</option>
                     <option value="Intermediate (6-2 years)">Intermediate (6-2 years)</option>
@@ -158,7 +158,7 @@ const EnquiryModal = ({ isOpen, onClose }) => {
                   <select
                     value={formData.preferredContact}
                     onChange={(e) => setFormData({ ...formData, preferredContact: e.target.value })}
-                    className="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2 text-xs font-medium text-slate-900 focus:ring-2 focus:ring-[#0B192C] outline-none"
+                    className="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2 text-xs font-medium text-slate-900 focus:ring-2 focus:ring-[#0D1B15] outline-none"
                   >
                     <option value="WhatsApp">WhatsApp</option>
                     <option value="Phone Call">Phone Call</option>
@@ -174,7 +174,7 @@ const EnquiryModal = ({ isOpen, onClose }) => {
                   placeholder="Tell us what you would like to learn..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2 text-xs font-medium text-slate-900 focus:ring-2 focus:ring-[#0B192C] outline-none resize-none"
+                  className="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2 text-xs font-medium text-slate-900 focus:ring-2 focus:ring-[#0D1B15] outline-none resize-none"
                 />
               </div>
 
@@ -193,7 +193,7 @@ const EnquiryModal = ({ isOpen, onClose }) => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className={`px-6 py-3 rounded-xl bg-[#0B192C] hover:bg-[#1E3A8A] text-amber-400 font-black text-xs transition-all shadow-md flex items-center gap-2 cursor-pointer border border-amber-500/30 ${loading ? 'opacity-70 cursor-not-allowed' : ''}`}
+                  className={`px-6 py-3 rounded-xl bg-[#0D1B15] hover:bg-[#12261E] text-amber-400 font-black text-xs transition-all shadow-md flex items-center gap-2 cursor-pointer border border-amber-500/30 ${loading ? 'opacity-70 cursor-not-allowed' : ''}`}
                 >
                   <span>{loading ? 'Sending...' : 'Submit Request'}</span>
                   <Send className="w-3.5 h-3.5" />

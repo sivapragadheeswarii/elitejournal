@@ -21,11 +21,11 @@ const MarketTickerBar = () => {
   const items = [...TICKER_DATA, ...TICKER_DATA];
 
   return (
-    <div className="w-full bg-[#050E1A] text-slate-300 text-xs py-2 border-b border-slate-800/80 overflow-hidden relative z-50 select-none">
+    <div className="w-full bg-[#07110D] text-slate-300 text-xs py-2 border-b border-[#1F3A2E]/80 overflow-hidden relative z-50 select-none">
       <div className="flex items-center">
         
         {/* Live Badge */}
-        <div className="shrink-0 bg-[#0B192C] px-3 py-0.5 border-r border-slate-800 text-[10px] font-black text-amber-400 font-mono tracking-wider flex items-center gap-1.5 z-20 shadow-md">
+        <div className="shrink-0 bg-[#0D1B15] px-3 py-0.5 border-r border-[#1F3A2E] text-[10px] font-black text-amber-400 font-mono tracking-wider flex items-center gap-1.5 z-20 shadow-md">
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
