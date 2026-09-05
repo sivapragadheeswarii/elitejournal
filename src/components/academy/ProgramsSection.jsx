@@ -1,5 +1,5 @@
 import React from 'react';
-import { Clock, Video, MessageCircle, ArrowRight, Star, CheckCircle2, Sparkles, Shield } from 'lucide-react';
+import { Clock, Video, MessageCircle, ArrowRight, Star, Sparkles, Shield } from 'lucide-react';
 import { COURSES } from '../../data/emaData';
 
 const ProgramsSection = ({ onOpenDemo }) => {
@@ -91,21 +91,6 @@ const ProgramsSection = ({ onOpenDemo }) => {
                     {course.shortDesc}
                   </p>
 
-                  {/* Tailored Syllabus Highlights */}
-                  <div className="pt-4 border-t border-[#1F3A2E]/80 flex flex-col gap-2.5">
-                    <span className="text-[11px] font-bold text-[#E2E8F0] uppercase tracking-wider font-mono">
-                      Tailored Syllabus Includes:
-                    </span>
-                    <div className="flex flex-col gap-2">
-                      {(course.syllabusHighlights || []).map((highlight, hIdx) => (
-                        <div key={hIdx} className="flex items-start gap-2.5 text-xs text-[#CBD5E1]">
-                          <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                          <span className="leading-snug">{highlight}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
                   {/* Program Delivery Info */}
                   <div className="pt-3 border-t border-[#1F3A2E]/60 flex flex-col gap-2 text-xs text-[#E2E8F0]">
                     <div className="flex items-center gap-2">
@@ -146,13 +131,13 @@ const ProgramsSection = ({ onOpenDemo }) => {
           <div className="flex flex-col gap-1.5 max-w-xl">
             <div className="inline-flex items-center gap-2 text-xs font-bold text-[#F59E0B] uppercase tracking-wider font-mono justify-center md:justify-start">
               <Sparkles className="w-4 h-4" />
-              <span>Personalized Syllabus Guidance</span>
+              <span>Personalized Level Guidance</span>
             </div>
             <h4 className="text-base sm:text-xl font-bold text-white font-heading">
               Not sure which level suits your experience?
             </h4>
             <p className="text-xs sm:text-sm text-[#94A3B8] leading-relaxed">
-              Attend our Free Demo Class. Our mentor will evaluate your background, trading experience, and learning goals to tailor the exact syllabus track for you.
+              Attend our Free Demo Class. Our mentor will evaluate your background, trading experience, and learning goals to recommend the right level for you.
             </p>
           </div>
           <button
