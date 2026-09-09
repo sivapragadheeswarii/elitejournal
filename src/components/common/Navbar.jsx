@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { ShieldCheck, Menu, X, ChevronRight, MessageSquare, Sparkles, LogIn } from 'lucide-react';
 import { BRAND } from '../../data/emaData';
 import logo from '../../assets/logo.png';
+import { trackContact } from '../../utils/metaPixel';
 
 const Navbar = ({ onOpenEnquiry, onOpenPortal }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -29,6 +30,7 @@ const Navbar = ({ onOpenEnquiry, onOpenPortal }) => {
   };
 
   const handleWhatsApp = () => {
+    trackContact({ location: 'Navbar WhatsApp CTA' });
     const cleanPhone = BRAND.phone.replace(/[^0-9]/g, '');
     const waUrl = `https://wa.me/${cleanPhone}?text=${encodeURIComponent('Hello Elite Market Academy! I would like to book a Free Demo Class.')}`;
     window.open(waUrl, '_blank');

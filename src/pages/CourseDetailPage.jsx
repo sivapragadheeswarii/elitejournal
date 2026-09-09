@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { COURSES } from '../data/emaData';
 import { COURSES_DATA } from '../data/coursesData';
@@ -9,6 +9,7 @@ import {
 import SeoHead from '../components/common/SeoHead';
 import { getCourseSchema, getBreadcrumbSchema } from '../utils/seoSchemas';
 import { BRAND } from '../data/emaData';
+import { trackContact, trackViewContent } from '../utils/metaPixel';
 
 const CourseDetailPage = ({ onOpenEnquiry }) => {
   const { slug } = useParams();
@@ -33,6 +34,15 @@ const CourseDetailPage = ({ onOpenEnquiry }) => {
   ) || COURSES_DATA.find(
     (c) => c.id === slug || c.slug === slug
   );
+
+  useEffect(() => {
+    if (course) {
+      trackViewContent({
+        content_name: course.title,
+        content_category: 'Course Detail',
+      });
+    }
+  }, [course]);
 
   // 404 Not Found
   if (!course) {
@@ -76,6 +86,7 @@ const CourseDetailPage = ({ onOpenEnquiry }) => {
   ];
 
   const handleWhatsApp = () => {
+    trackContact({ location: 'Course Detail Page', course: courseTitle });
     const cleanPhone = BRAND.phone.replace(/[^0-9]/g, '');
     const waUrl = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(`Hello Elite Market Academy! I am interested in the ${courseTitle} course. Can you share more details?`)}`;
     window.open(waUrl, '_blank');

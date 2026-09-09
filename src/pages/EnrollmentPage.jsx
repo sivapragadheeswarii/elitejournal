@@ -16,6 +16,7 @@ import {
 import SeoHead from '../components/common/SeoHead';
 import ScrollReveal from '../components/common/ScrollReveal';
 import { getOrganizationSchema, getBreadcrumbSchema } from '../utils/seoSchemas';
+import { trackInitiateCheckout } from '../utils/metaPixel';
 
 const EnrollmentPage = () => {
   const [courses, setCourses] = useState([]);
@@ -120,6 +121,13 @@ const EnrollmentPage = () => {
       setErrorMsg('Please select a course.');
       return;
     }
+
+    // Fire Meta Pixel InitiateCheckout event when student starts payment flow
+    trackInitiateCheckout({
+      content_name: selectedCourse?.courseName || formData.selectedCourse,
+      value: Number(formData.amount) || undefined,
+      currency: 'INR',
+    });
 
     setCurrentStep(2);
     window.scrollTo({ top: 250, behavior: 'smooth' });

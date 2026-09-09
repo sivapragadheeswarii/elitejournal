@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { X, Send, CheckCircle2, ShieldCheck } from 'lucide-react';
 import { COURSES } from '../../data/emaData';
+import { trackLead } from '../../utils/metaPixel';
 
 const EnquiryModal = ({ isOpen, onClose }) => {
   const [submitted, setSubmitted] = useState(false);
@@ -31,6 +32,10 @@ const EnquiryModal = ({ isOpen, onClose }) => {
       const data = await response.json();
       if (data.success) {
         setSubmitted(true);
+        trackLead({
+          content_name: 'Request Course Information Modal',
+          interested_course: formData.interestedCourse,
+        });
       } else {
         setErrorMsg(data.message || 'Failed to send enquiry.');
       }

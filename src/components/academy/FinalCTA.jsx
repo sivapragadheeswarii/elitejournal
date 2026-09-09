@@ -1,6 +1,7 @@
 import React from 'react';
 import { Sparkles, MessageSquare, ArrowRight, ShieldCheck } from 'lucide-react';
 import { BRAND } from '../../data/emaData';
+import { trackContact } from '../../utils/metaPixel';
 
 const FinalCTA = ({ onOpenDemo }) => {
   const scrollToDemo = () => {
@@ -13,6 +14,7 @@ const FinalCTA = ({ onOpenDemo }) => {
   };
 
   const handleWhatsApp = () => {
+    trackContact({ location: 'Final CTA' });
     const cleanPhone = BRAND.phone.replace(/[^0-9]/g, '');
     const waUrl = `https://wa.me/${cleanPhone}?text=${encodeURIComponent('Hello Elite Market Academy! I am interested in learning more about your stock market programs.')}`;
     window.open(waUrl, '_blank');

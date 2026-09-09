@@ -1,8 +1,45 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Video, MessageCircle, ArrowRight, Star, Sparkles, Shield } from 'lucide-react';
 import { COURSES } from '../../data/emaData';
+import { trackViewContent } from '../../utils/metaPixel';
 
 const ProgramsSection = ({ onOpenDemo }) => {
+  const sectionRef = useRef(null);
+  const hasTrackedViewRef = useRef(false);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el || hasTrackedViewRef.current) return;
+
+    // Use IntersectionObserver to track ViewContent when user views the Courses/Programs section
+    if (typeof IntersectionObserver !== 'undefined') {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && !hasTrackedViewRef.current) {
+              hasTrackedViewRef.current = true;
+              trackViewContent({
+                content_name: 'One Comprehensive Program • 3 Tailored Levels',
+                content_category: 'Stock Market Course',
+              });
+              observer.disconnect();
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      observer.observe(el);
+      return () => observer.disconnect();
+    } else {
+      // Fallback if IntersectionObserver not supported
+      trackViewContent({
+        content_name: 'One Comprehensive Program • 3 Tailored Levels',
+        content_category: 'Stock Market Course',
+      });
+    }
+  }, []);
+
   const handleSelectLevel = (levelTitle) => {
     // Notify the Free Demo form to preselect this level
     window.dispatchEvent(new CustomEvent('select-ema-level', { detail: levelTitle }));
@@ -18,7 +55,7 @@ const ProgramsSection = ({ onOpenDemo }) => {
   };
 
   return (
-    <section id="courses" className="py-14 sm:py-24 bg-[#07110D] text-[#E2E8F0] border-b border-[#1F3A2E] relative overflow-hidden">
+    <section ref={sectionRef} id="courses" className="py-14 sm:py-24 bg-[#07110D] text-[#E2E8F0] border-b border-[#1F3A2E] relative overflow-hidden">
       {/* Ambient background glow */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-emerald-500/5 rounded-full blur-[140px] pointer-events-none" />
 

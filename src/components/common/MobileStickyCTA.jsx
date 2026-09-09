@@ -1,6 +1,7 @@
 import React from 'react';
 import { Sparkles, MessageSquare } from 'lucide-react';
 import { BRAND } from '../../data/emaData';
+import { trackContact } from '../../utils/metaPixel';
 
 const MobileStickyCTA = ({ onOpenDemo }) => {
   const scrollToDemo = () => {
@@ -13,6 +14,7 @@ const MobileStickyCTA = ({ onOpenDemo }) => {
   };
 
   const handleWhatsApp = () => {
+    trackContact({ location: 'Mobile Sticky Bottom Bar' });
     const cleanPhone = BRAND.phone.replace(/[^0-9]/g, '');
     const waUrl = `https://wa.me/${cleanPhone}?text=${encodeURIComponent('Hello Elite Market Academy! I would like to book a Free Demo Class.')}`;
     window.open(waUrl, '_blank');

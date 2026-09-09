@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Sparkles, Send, CheckCircle2, ShieldCheck, PhoneCall, Loader2 } from 'lucide-react';
 import { BRAND } from '../../data/emaData';
+import { trackLead } from '../../utils/metaPixel';
 
 const FreeDemoSection = () => {
   const [formData, setFormData] = useState({
@@ -46,6 +47,12 @@ const FreeDemoSection = () => {
       setIsSubmitting(false);
       setIsSuccess(true);
       
+      // Fire Meta Pixel Lead event ONLY upon successful Free Demo submission
+      trackLead({
+        content_name: 'Free Demo Class',
+        experience_level: formData.experienceLevel,
+      });
+
       // Construct WhatsApp message URL
       const text = encodeURIComponent(
         `Hello Elite Market Academy!\nI would like to book a FREE Demo Class.\n\nName: ${formData.fullName}\nWhatsApp: ${formData.whatsappNumber}\nExperience Level: ${formData.experienceLevel}`

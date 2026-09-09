@@ -18,6 +18,7 @@ import SeoHead from '../components/common/SeoHead';
 import ScrollReveal from '../components/common/ScrollReveal';
 import { getFaqSchema, getBreadcrumbSchema } from '../utils/seoSchemas';
 import heroEmaCh from '../assets/hero_ema_chart.png';
+import { trackContact } from '../utils/metaPixel';
 import EnquiryModal from '../components/common/EnquiryModal';
 
 const EXTENDED_FAQS = [
@@ -144,6 +145,7 @@ const FAQPage = () => {
                   href="https://wa.me/919443879989"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackContact({ location: 'FAQ Page WhatsApp Support' })}
                   className="px-4 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700 text-slate-200 hover:text-white font-bold text-xs transition-all flex items-center gap-2 cursor-pointer"
                 >
                   <span>WhatsApp Support</span>

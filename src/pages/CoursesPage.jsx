@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { COURSES } from '../data/emaData';
 import {
@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import SeoHead from '../components/common/SeoHead';
 import { getCourseSchema, getBreadcrumbSchema } from '../utils/seoSchemas';
+import { trackViewContent } from '../utils/metaPixel';
 
 // Per-course enrichment matching ProgramsSection.jsx
 const COURSE_EXTRAS = {
@@ -31,6 +32,12 @@ const COURSE_EXTRAS = {
 };
 
 const CoursesPage = ({ onOpenEnquiry }) => {
+  useEffect(() => {
+    trackViewContent({
+      content_name: 'Courses & Programs Page',
+      content_category: 'Stock Market Course',
+    });
+  }, []);
   const coursesJsonLd = [
     getBreadcrumbSchema([
       { name: 'Home', url: '/' },
