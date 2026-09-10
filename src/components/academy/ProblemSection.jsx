@@ -31,7 +31,7 @@ const ProblemSection = () => {
         
         {/* Section Header */}
         <div className="flex flex-col items-center text-center gap-3 mb-10 sm:mb-16">
-          <span className="px-3 me-0 py-1 rounded-full bg-[#0D1B15] border border-[#1F3A2E] text-[#F59E0B] text-[11px] font-bold uppercase tracking-wider">
+          <span className="px-3 py-1 rounded-full bg-[#0D1B15] border border-[#1F3A2E] text-[#F59E0B] text-[11px] font-bold uppercase tracking-wider w-fit">
             THE REAL CHALLENGE
           </span>
           <h2 className="text-xl xs:text-2xl sm:text-4xl font-extrabold text-white font-heading tracking-tight leading-tight max-w-3xl">
@@ -74,11 +74,11 @@ const ProblemSection = () => {
 
         {/* Bottom Solution Statement Banner */}
         <div className="mt-10 sm:mt-14 p-4 sm:p-6 rounded-2xl bg-gradient-to-r from-[#0D1B15] via-[#12261E] to-[#0D1B15] border border-[#F59E0B]/30 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 text-left shadow-xl">
-          <div className="flex items-start sm:items-center gap-3">
+          <div className="flex items-start sm:items-center gap-3 min-w-0">
             <div className="w-10 h-10 rounded-xl bg-[#F59E0B]/20 text-[#F59E0B] flex items-center justify-center shrink-0 border border-[#F59E0B]/30 mt-0.5 sm:mt-0">
               <CheckCircle2 className="w-5 h-5" />
             </div>
-            <div className="flex flex-col text-left">
+            <div className="flex flex-col text-left min-w-0">
               <span className="text-[10px] font-mono font-bold text-[#F59E0B] uppercase tracking-wider block">THE EMA CORE PRINCIPLE</span>
               <h4 className="text-sm sm:text-lg font-extrabold text-white tracking-tight leading-snug">
                 "The solution isn't more tips. It's better market understanding."

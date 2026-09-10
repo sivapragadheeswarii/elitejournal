@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Quote, Star, MessageSquarePlus, Sparkles, MessageCircle } from 'lucide-react';
 import GiveFeedbackModal from '../common/GiveFeedbackModal';
 
@@ -66,10 +66,10 @@ const TestimonialsSection = () => {
           </div>
 
           {/* Give Feedback Action Button */}
-          <div className="flex items-center justify-center md:justify-end shrink-0">
+          <div className="flex items-center justify-center md:justify-end shrink-0 w-full md:w-auto">
             <button
               onClick={() => setIsModalOpen(true)}
-              className="px-6 py-3 rounded-xl bg-gradient-to-r from-[#F59E0B] via-[#D4AF37] to-[#F59E0B] hover:brightness-110 text-slate-950 font-extrabold text-xs sm:text-sm transition-all shadow-lg shadow-[#F59E0B]/20 active:scale-95 flex items-center gap-2 cursor-pointer btn-shimmer"
+              className="w-full sm:w-auto justify-center px-6 py-3 rounded-xl bg-gradient-to-r from-[#F59E0B] via-[#D4AF37] to-[#F59E0B] hover:brightness-110 text-slate-950 font-extrabold text-xs sm:text-sm transition-all shadow-lg shadow-[#F59E0B]/20 active:scale-95 flex items-center gap-2 cursor-pointer btn-shimmer"
             >
               <MessageSquarePlus className="w-4 h-4 text-slate-950" />
               <span>Give Feedback</span>

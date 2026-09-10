@@ -164,12 +164,12 @@ const DailyMarketSection = () => {
 
         {/* Instrument Tabs */}
         {markets.length > 0 && (
-          <div className="flex items-center gap-2 overflow-x-auto py-5 scrollbar-none">
+          <div className="flex items-center gap-2 overflow-x-auto py-4 sm:py-5 scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0">
             {markets.map((m) => (
               <button
                 key={m}
                 onClick={() => setSelectedMarket(m)}
-                className={`px-4 py-2 rounded-xl text-xs font-extrabold font-mono transition-all cursor-pointer whitespace-nowrap flex items-center gap-2 ${
+                className={`px-3.5 sm:px-4 py-2 rounded-xl text-xs font-extrabold font-mono transition-all cursor-pointer whitespace-nowrap flex items-center gap-2 shrink-0 ${
                   selectedMarket === m
                     ? 'bg-gradient-to-r from-[#F59E0B] to-[#D4AF37] text-slate-950 shadow-lg shadow-[#F59E0B]/20 scale-105'
                     : 'bg-[#0D1B15] text-[#94A3B8] hover:text-white border border-[#1F3A2E] hover:border-[#F59E0B]/40'
@@ -187,13 +187,13 @@ const DailyMarketSection = () => {
           <div className="mt-2 flex flex-col gap-6">
             
             {/* Instrument Info Strip */}
-            <div className="p-4 sm:p-5 rounded-2xl bg-[#0D1B15] border border-[#1F3A2E] flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-lg">
+            <div className="p-4 sm:p-5 rounded-2xl bg-[#0D1B15] border border-[#1F3A2E] flex flex-col sm:flex-row sm:items-center justify-between gap-3.5 shadow-lg">
               <div className="flex items-center gap-3">
-                <div className="p-2.5 rounded-xl bg-[#07110D] border border-[#1F3A2E] text-[#F59E0B]">
+                <div className="p-2.5 rounded-xl bg-[#07110D] border border-[#1F3A2E] text-[#F59E0B] shrink-0">
                   <Activity className="w-5 h-5 text-[#F59E0B]" />
                 </div>
-                <div className="flex flex-col text-left">
-                  <div className="flex items-center gap-2">
+                <div className="flex flex-col text-left min-w-0">
+                  <div className="flex items-center gap-2 flex-wrap">
                     <span className="text-base sm:text-lg font-extrabold text-white font-heading">
                       {activeItem.market}
                     </span>
@@ -211,8 +211,8 @@ const DailyMarketSection = () => {
                       <span>{sentiment}</span>
                     </span>
                   </div>
-                  <span className="text-[11px] font-mono text-[#94A3B8] flex items-center gap-1 mt-0.5">
-                    <Calendar className="w-3 h-3 text-[#F59E0B]" />
+                  <span className="text-[11px] font-mono text-[#94A3B8] flex items-center gap-1 mt-0.5 flex-wrap">
+                    <Calendar className="w-3 h-3 text-[#F59E0B] shrink-0" />
                     <span>Session Date: {formatDisplayDate(activeItem.date)}</span>
                     {lastRefreshed && <span className="text-slate-500">• Synced at {lastRefreshed}</span>}
                   </span>
@@ -220,7 +220,7 @@ const DailyMarketSection = () => {
               </div>
 
               {/* Day High, Low, Pivot */}
-              <div className="grid grid-cols-3 gap-2 px-3 py-2 rounded-xl bg-[#07110D] border border-[#1F3A2E] font-mono text-center shrink-0">
+              <div className="w-full sm:w-auto grid grid-cols-3 gap-2 px-3 py-2 rounded-xl bg-[#07110D] border border-[#1F3A2E] font-mono text-center shrink-0">
                 <div className="flex flex-col">
                   <span className="text-[9px] font-bold text-slate-400 uppercase">HIGH</span>
                   <span className="text-xs sm:text-sm font-extrabold text-white">₹{activeItem.high?.toLocaleString('en-IN')}</span>

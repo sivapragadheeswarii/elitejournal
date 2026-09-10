@@ -76,7 +76,7 @@ const EMADifferentiation = () => {
 
           {/* Comparison Table */}
           <div className="w-full max-w-4xl mt-6 rounded-2xl bg-[#07110D] border border-[#1F3A2E] overflow-hidden shadow-2xl">
-            <div className="grid grid-cols-2 p-3 sm:p-5 bg-[#0D1B15] border-b border-[#1F3A2E] font-heading font-extrabold text-[11px] sm:text-sm text-center">
+            <div className="grid grid-cols-2 p-2.5 xs:p-3 sm:p-5 bg-[#0D1B15] border-b border-[#1F3A2E] font-heading font-extrabold text-[10px] xs:text-[11px] sm:text-sm text-center">
               <div className="text-rose-400 uppercase tracking-wider flex items-center justify-center gap-1 sm:gap-1.5">
                 <XCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
                 <span className="truncate">TYPICAL APPROACH</span>
@@ -89,20 +89,20 @@ const EMADifferentiation = () => {
 
             <div className="divide-y divide-[#1F3A2E]">
               {COMPARISONS.map((row, idx) => (
-                <div key={idx} className="grid grid-cols-2 p-3 sm:p-5 text-[11px] sm:text-sm font-medium text-left">
-                  <div className="text-[#94A3B8] flex items-start sm:items-center gap-1.5 sm:gap-2 pr-2 sm:pr-4">
-                    <span className="w-1.5 h-1.5 rounded-full bg-rose-500 shrink-0 mt-1 sm:mt-0" />
+                <div key={idx} className="grid grid-cols-2 p-2.5 xs:p-3.5 sm:p-5 text-[10.5px] xs:text-[11.5px] sm:text-sm font-medium text-left">
+                  <div className="text-[#94A3B8] flex items-start gap-1.5 sm:gap-2 pr-1.5 xs:pr-2 sm:pr-4">
+                    <span className="w-1.5 h-1.5 rounded-full bg-rose-500 shrink-0 mt-1" />
                     <span className="leading-snug">{row.typical}</span>
                   </div>
-                  <div className="text-white font-semibold flex items-start sm:items-center gap-1.5 sm:gap-2 pl-2.5 sm:pl-4 border-l border-[#1F3A2E]">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0 mt-1 sm:mt-0" />
+                  <div className="text-white font-semibold flex items-start gap-1.5 sm:gap-2 pl-2 xs:pl-2.5 sm:pl-4 border-l border-[#1F3A2E]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0 mt-1" />
                     <span className="text-emerald-300 leading-snug">{row.ema}</span>
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="p-3 sm:p-4 bg-[#0D1B15] border-t border-[#1F3A2E] text-center text-[11px] sm:text-xs font-mono text-[#F59E0B]">
+            <div className="p-2.5 xs:p-3 sm:p-4 bg-[#0D1B15] border-t border-[#1F3A2E] text-center text-[10px] xs:text-[11px] sm:text-xs font-mono text-[#F59E0B]">
               Independent Thinking • Risk Control • Structured Education
             </div>
           </div>

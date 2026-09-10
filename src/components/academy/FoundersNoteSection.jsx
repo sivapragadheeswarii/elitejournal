@@ -70,7 +70,7 @@ const FoundersNoteSection = ({ showPhoto = true, theme = 'light', sec1Theme, sec
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#07110D] via-[#07110D]/40 to-transparent" />
                     <div className="absolute bottom-0 inset-x-0 p-4 sm:p-6 flex flex-col gap-1.5 sm:gap-2">
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 text-[9.5px] sm:text-[10px] font-bold uppercase tracking-wider w-max font-mono">
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 text-[9.5px] sm:text-[10px] font-bold uppercase tracking-wider w-fit font-mono">
                         <ShieldCheck className="w-3 h-3 sm:w-3.5 sm:h-3.5" /> NISM Certified
                       </span>
                       <h3 className="text-xl sm:text-2xl font-black font-heading text-white">Saravana Kumar, B.E.</h3>

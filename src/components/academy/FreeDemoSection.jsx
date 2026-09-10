@@ -80,7 +80,7 @@ const FreeDemoSection = () => {
           
           {/* Left Info Column */}
           <div className="lg:col-span-6 flex flex-col gap-6 text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D1B15] border border-[#1F3A2E] text-[#F59E0B] text-[11px] font-bold uppercase tracking-wider w-max">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D1B15] border border-[#1F3A2E] text-[#F59E0B] text-[11px] font-bold uppercase tracking-wider w-fit">
               <Sparkles className="w-3.5 h-3.5" />
               <span>FREE DEMO CLASS</span>
             </div>

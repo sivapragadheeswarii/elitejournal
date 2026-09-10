@@ -66,7 +66,7 @@ const MentorSection = () => {
             {/* Mentor Philosophy Content */}
             <div className="lg:col-span-7 flex flex-col gap-5 text-left">
               
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#07110D] border border-[#1F3A2E] text-[#F59E0B] text-[11px] font-bold uppercase tracking-wider w-max font-mono">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#07110D] border border-[#1F3A2E] text-[#F59E0B] text-[11px] font-bold uppercase tracking-wider w-fit font-mono">
                 <GraduationCap className="w-3.5 h-3.5" />
                 <span>TEACHING PHILOSOPHY</span>
               </div>

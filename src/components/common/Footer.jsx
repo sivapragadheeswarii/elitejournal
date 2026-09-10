@@ -46,7 +46,7 @@ const Footer = () => {
           </div>
 
           {/* Links Grid */}
-          <div className="grid grid-cols-2 lg:col-span-2 gap-8 sm:gap-12">
+          <div className="grid grid-cols-2 lg:col-span-2 gap-4 xs:gap-6 sm:gap-12">
             
             {/* Quick Links */}
             <div className="flex flex-col gap-3">
