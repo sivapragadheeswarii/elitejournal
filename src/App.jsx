@@ -90,7 +90,7 @@ function AppContent() {
           <Route path="/faq" element={<HomePage onOpenEnquiry={handleOpenEnquiry} onOpenPortal={handleOpenPortal} />} />
           <Route path="/contact" element={<HomePage onOpenEnquiry={handleOpenEnquiry} onOpenPortal={handleOpenPortal} />} />
           <Route path="/enrollment" element={<HomePage onOpenEnquiry={handleOpenEnquiry} onOpenPortal={handleOpenPortal} />} />
-          <Route path="/market-analysis" element={<HomePage onOpenEnquiry={handleOpenEnquiry} onOpenPortal={handleOpenPortal} />} />
+          <Route path="/market-analysis" element={<MarketAnalysisPage onOpenPortal={handleOpenPortal} />} />
 
           {/* EPTS Journal Standalone Route */}
           <Route path="/epts-journal" element={<EPTSJournalLandingPage onOpenPortal={handleOpenPortal} />} />

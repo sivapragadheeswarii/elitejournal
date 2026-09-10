@@ -40,6 +40,7 @@ const Navbar = ({ onOpenEnquiry, onOpenPortal }) => {
     { name: 'Home', targetId: 'home' },
     { name: 'About EMA', targetId: 'about' },
     { name: 'Courses', targetId: 'courses' },
+    { name: 'Market Analysis', targetId: 'market-analysis' },
     { name: 'Learning Hub', targetId: 'learning' },
     { name: 'FAQ', targetId: 'faq' },
     { name: 'Contact', targetId: 'contact' },

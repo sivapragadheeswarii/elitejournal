@@ -7,6 +7,7 @@ import AboutEMAFramework from '../components/academy/AboutEMAFramework';
 import AudienceSection from '../components/academy/AudienceSection';
 import WhatYouWillLearn from '../components/academy/WhatYouWillLearn';
 import EMADifferentiation from '../components/academy/EMADifferentiation';
+import DailyMarketSection from '../components/academy/DailyMarketSection';
 import LearningJourney from '../components/academy/LearningJourney';
 import MentorSection from '../components/academy/MentorSection';
 import ProgramsSection from '../components/academy/ProgramsSection';
@@ -78,7 +79,12 @@ const HomePage = ({ onOpenEnquiry, onOpenPortal }) => {
         <EMADifferentiation />
       </ScrollReveal>
 
-      {/* 08. LEARNING JOURNEY TIMELINE (LIGHT) */}
+      {/* 08. DAILY LIVE TECHNICAL DESK / MARKET ANALYSIS (DARK) */}
+      <ScrollReveal animation="fade-up">
+        <DailyMarketSection />
+      </ScrollReveal>
+
+      {/* 09. LEARNING JOURNEY TIMELINE (LIGHT) */}
       <ScrollReveal animation="fade-up">
         <LearningJourney />
       </ScrollReveal>

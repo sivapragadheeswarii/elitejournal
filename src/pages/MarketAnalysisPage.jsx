@@ -195,7 +195,7 @@ const MarketAnalysisPage = ({ onOpenPortal }) => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC] text-slate-900 font-sans selection:bg-[#FFFBEB]0 selection:text-slate-950 pb-12 sm:pb-20 overflow-hidden relative">
+    <div className="min-h-screen bg-[#F8FAFC] text-slate-900 font-sans selection:bg-[#F59E0B] selection:text-slate-950 pb-12 sm:pb-20 overflow-hidden relative">
       <SeoHead
         title="Market Analysis & Key Support/Resistance Levels | Elite Market Academy"
         description="Daily stock market technical analysis including High, Low, Pivot Point, Resistance (R1, R2, R3) and Support (S1, S2, S3) levels for NIFTY, BANK NIFTY, and key indices."
@@ -207,7 +207,7 @@ const MarketAnalysisPage = ({ onOpenPortal }) => {
         <FinancialBackground />
 
         {/* Glow Spheres */}
-        <div className="absolute top-0 right-1/4 w-[300px] sm:w-[450px] h-[300px] sm:h-[450px] bg-[#FFFBEB]0/10 rounded-full blur-[120px] pointer-events-none -translate-y-1/2" />
+        <div className="absolute top-0 right-1/4 w-[300px] sm:w-[450px] h-[300px] sm:h-[450px] bg-[#F59E0B]/10 rounded-full blur-[120px] pointer-events-none -translate-y-1/2" />
         <div className="absolute bottom-0 left-10 w-[300px] sm:w-[450px] h-[300px] sm:h-[450px] bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none translate-y-1/3" />
 
         <div className="max-w-7xl mx-auto flex flex-col items-center text-center relative z-10">
@@ -484,7 +484,7 @@ const MarketAnalysisPage = ({ onOpenPortal }) => {
           className="p-4 sm:p-8 rounded-2xl sm:rounded-3xl border border-[#1F3A2E] bg-[#07110D] text-white flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 sm:gap-6 shadow-2xl relative overflow-hidden"
         >
           <div className="flex items-start sm:items-center gap-3 sm:gap-4 text-left relative z-10">
-            <div className="p-2 sm:p-3.5 rounded-xl sm:rounded-2xl bg-[#FFFBEB]0/20 border border-[#F59E0B]/40 text-[#F59E0B] shrink-0 shadow-lg animate-pulse">
+            <div className="p-2 sm:p-3.5 rounded-xl sm:rounded-2xl bg-[#F59E0B]/20 border border-[#F59E0B]/40 text-[#F59E0B] shrink-0 shadow-lg animate-pulse">
               <ShieldCheck className="w-5 h-5 sm:w-8 sm:h-8" />
             </div>
             <div className="flex flex-col">
