@@ -15,7 +15,7 @@ import {
   FileText,
   Sparkles,
 } from 'lucide-react';
-import logo from '../../assets/logo.png';
+import logo from '../../assets/logo-emblem.png';
 
 const PortalSplash = ({ isOpen, onClose, destinationUrl }) => {
   if (!isOpen) return null;
@@ -78,8 +78,8 @@ const PortalSplash = ({ isOpen, onClose, destinationUrl }) => {
         {/* Top Header Overlay */}
         <div className="relative z-10 max-w-5xl mx-auto w-full flex items-center justify-between gap-4 pb-4 border-b border-[#1F3A2E]">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#0D1B15] border border-[#1F3A2E] flex items-center justify-center p-1.5 shadow-md shrink-0">
-              <img src={logo} alt="EMA Logo" className="w-full h-full object-contain" />
+            <div className="h-10 sm:h-11 px-2.5 rounded-xl bg-[#0D1B15] border border-[#1F3A2E] flex items-center justify-center shrink-0 shadow-md">
+              <img src={logo} alt="EMA Logo" className="h-6 sm:h-7 w-auto object-contain" />
             </div>
             <div className="flex flex-col text-left">
               <span className="text-xs sm:text-sm font-extrabold text-white font-heading tracking-tight">
@@ -121,11 +121,11 @@ const PortalSplash = ({ isOpen, onClose, destinationUrl }) => {
               transition={{ duration: 0.5 }}
               className="relative flex items-center justify-center"
             >
-              <div className="w-20 h-20 sm:w-28 sm:h-28 rounded-2xl bg-[#0D1B15] border-2 border-[#F59E0B]/40 flex items-center justify-center p-3 shadow-2xl shadow-[#F59E0B]/20 relative">
+              <div className="h-20 sm:h-24 px-6 sm:px-8 rounded-2xl bg-[#0D1B15] border-2 border-[#F59E0B]/40 flex items-center justify-center shadow-2xl shadow-[#F59E0B]/20 relative">
                 <img
                   src={logo}
                   alt="EPTS Logo"
-                  className="w-full h-full object-contain"
+                  className="h-12 sm:h-16 w-auto object-contain"
                 />
               </div>
             </motion.div>
