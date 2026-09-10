@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { ShieldAlert, Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
 import { BRAND, COURSES } from '../../data/emaData';
 import logo from '../../assets/logo.png';
@@ -12,8 +11,8 @@ const Footer = () => {
         {/* Top Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
           
-          {/* Brand Info (Cols 1-2) */}
-          <div className="lg:col-span-2 flex flex-col gap-4">
+          {/* Brand Info (Cols 1-3) */}
+          <div className="lg:col-span-3 flex flex-col gap-4">
             <div className="flex items-center gap-3">
               <img src={logo} alt="Elite Market Academy Logo" className="h-10 sm:h-12 w-auto object-contain shrink-0" />
               <div className="flex flex-col">
@@ -47,7 +46,7 @@ const Footer = () => {
           </div>
 
           {/* Links Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:col-span-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-2 lg:col-span-2 gap-8 sm:gap-12">
             
             {/* Quick Links */}
             <div className="flex flex-col gap-3">
@@ -86,20 +85,6 @@ const Footer = () => {
                     </a>
                   </li>
                 ))}
-              </ul>
-            </div>
-
-            {/* Legal */}
-            <div className="flex flex-col gap-3 col-span-2 sm:col-span-1">
-              <h4 className="text-xs font-extrabold text-[#F59E0B] uppercase tracking-widest font-mono">
-                Legal & Policy
-              </h4>
-              <ul className="flex flex-col gap-2 text-xs text-[#94A3B8] font-semibold">
-                <li><Link to="/disclaimer" className="hover:text-white transition-colors flex items-center gap-1.5"><ArrowRight className="w-3 h-3 text-[#F59E0B]/70" /> Disclaimer</Link></li>
-                <li><Link to="/risk-disclosure" className="hover:text-white transition-colors flex items-center gap-1.5"><ArrowRight className="w-3 h-3 text-[#F59E0B]/70" /> Risk Disclosure</Link></li>
-                <li><Link to="/privacy-policy" className="hover:text-white transition-colors flex items-center gap-1.5"><ArrowRight className="w-3 h-3 text-[#F59E0B]/70" /> Privacy Policy</Link></li>
-                <li><Link to="/terms" className="hover:text-white transition-colors flex items-center gap-1.5"><ArrowRight className="w-3 h-3 text-[#F59E0B]/70" /> Terms & Conditions</Link></li>
-                <li><Link to="/refund-policy" className="hover:text-white transition-colors flex items-center gap-1.5"><ArrowRight className="w-3 h-3 text-[#F59E0B]/70" /> Refund Policy</Link></li>
               </ul>
             </div>
 
