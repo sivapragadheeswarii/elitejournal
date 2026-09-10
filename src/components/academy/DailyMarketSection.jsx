@@ -19,41 +19,6 @@ import {
 
 const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
-const FALLBACK_ANALYSIS_DATA = [
-  {
-    _id: 'sample-nifty',
-    market: 'NIFTY 50',
-    date: new Date().toISOString().split('T')[0],
-    high: 25500,
-    low: 25200,
-    pivot: 25350,
-    r1: 25500,
-    r2: 25650,
-    r3: 25800,
-    s1: 25200,
-    s2: 25050,
-    s3: 24900,
-    notes: 'Market is showing strong resistance near R2. Watch key support levels closely before taking positions.',
-    status: 'Published',
-  },
-  {
-    _id: 'sample-banknifty',
-    market: 'BANK NIFTY',
-    date: new Date().toISOString().split('T')[0],
-    high: 53800,
-    low: 53100,
-    pivot: 53450,
-    r1: 53800,
-    r2: 54150,
-    r3: 54500,
-    s1: 53100,
-    s2: 52750,
-    s3: 52400,
-    notes: 'Bank Nifty remains range-bound between S1 and R1. Breakout above R1 targets R2.',
-    status: 'Published',
-  },
-];
-
 const DailyMarketSection = () => {
   const [analyses, setAnalyses] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -68,19 +33,23 @@ const DailyMarketSection = () => {
         headers: { 'Cache-Control': 'no-cache' },
       });
       const data = await res.json();
-      if (data?.success && Array.isArray(data.data) && data.data.length > 0) {
+      if (data?.success && Array.isArray(data.data)) {
         setAnalyses(data.data);
-        if (!selectedMarket || !data.data.find((item) => item.market === selectedMarket)) {
-          setSelectedMarket(data.data[0].market);
+        if (data.data.length > 0) {
+          if (!selectedMarket || !data.data.find((item) => item.market === selectedMarket)) {
+            setSelectedMarket(data.data[0].market);
+          }
+        } else {
+          setSelectedMarket('');
         }
       } else {
-        setAnalyses(FALLBACK_ANALYSIS_DATA);
-        if (!selectedMarket) setSelectedMarket(FALLBACK_ANALYSIS_DATA[0].market);
+        setAnalyses([]);
+        setSelectedMarket('');
       }
     } catch (err) {
-      console.warn('API sync warning, using cached/fallback technical desk:', err);
-      setAnalyses(FALLBACK_ANALYSIS_DATA);
-      if (!selectedMarket) setSelectedMarket(FALLBACK_ANALYSIS_DATA[0].market);
+      console.warn('API sync warning:', err);
+      setAnalyses([]);
+      setSelectedMarket('');
     } finally {
       setLoading(false);
       const now = new Date();
@@ -401,8 +370,16 @@ const DailyMarketSection = () => {
 
           </div>
         ) : (
-          <div className="py-12 text-center text-slate-400 font-mono text-xs">
-            No published market analysis available for today.
+          <div className="mt-6 p-8 sm:p-12 rounded-2xl bg-[#0D1B15] border border-[#1F3A2E] text-center flex flex-col items-center justify-center gap-3">
+            <div className="p-3 rounded-full bg-[#07110D] border border-[#1F3A2E] text-[#F59E0B]">
+              <BarChart2 className="w-6 h-6 text-[#F59E0B]" />
+            </div>
+            <h3 className="text-base sm:text-lg font-bold text-white font-heading">
+              No Market Analysis Published
+            </h3>
+            <p className="text-xs sm:text-sm text-[#94A3B8] max-w-md font-medium">
+              Institutional levels and trading commentary will appear here once published from our research desk.
+            </p>
           </div>
         )}
 

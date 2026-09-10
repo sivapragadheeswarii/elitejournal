@@ -23,70 +23,27 @@ import {
 
 const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
-// Fallback market analysis data (30-day window)
-const FALLBACK_ANALYSIS_DATA = [
-  {
-    _id: 'sample-nifty-1',
-    market: 'NIFTY 50',
-    date: new Date().toISOString().split('T')[0],
-    high: 25500,
-    low: 25200,
-    pivot: 25350,
-    r1: 25500,
-    r2: 25650,
-    r3: 25800,
-    s1: 25200,
-    s2: 25050,
-    s3: 24900,
-    sentiment: 'Bullish',
-    notes: 'Market is showing strong resistance near R2 (₹25,650). Watch key support levels closely before taking long positions.',
-    status: 'Published',
-    createdAt: new Date().toISOString(),
-  },
-  {
-    _id: 'sample-banknifty-1',
-    market: 'BANK NIFTY',
-    date: new Date().toISOString().split('T')[0],
-    high: 53800,
-    low: 53100,
-    pivot: 53450,
-    r1: 53800,
-    r2: 54150,
-    r3: 54500,
-    s1: 53100,
-    s2: 52750,
-    s3: 52400,
-    sentiment: 'Neutral',
-    notes: 'Bank Nifty remains range-bound between S1 and R1. Breakout above R1 could trigger further momentum toward R2.',
-    status: 'Published',
-    createdAt: new Date().toISOString(),
-  },
-  {
-    _id: 'sample-finnifty-1',
-    market: 'FINNIFTY',
-    date: new Date().toISOString().split('T')[0],
-    high: 24100,
-    low: 23800,
-    pivot: 23950,
-    r1: 24100,
-    r2: 24250,
-    r3: 24400,
-    s1: 23800,
-    s2: 23650,
-    s3: 23500,
-    sentiment: 'Bearish',
-    notes: 'Financial services testing pivot zones. High volatility expected around key corporate announcements.',
-    status: 'Published',
-    createdAt: new Date().toISOString(),
-  },
-];
-
 const MarketAnalysisPage = ({ onOpenPortal }) => {
   const [analyses, setAnalyses] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedMarket, setSelectedMarket] = useState('ALL');
   const [selectedDate, setSelectedDate] = useState('latest');
   const [lastUpdatedTime, setLastUpdatedTime] = useState('');
+
+  // 30-day retention guard (filter out any analyses older than 30 days)
+  const filter30DaysRetention = (items) => {
+    if (!Array.isArray(items)) return [];
+    const thirtyDaysAgo = Date.now() - 30 * 24 * 60 * 60 * 1000;
+    return items.filter((item) => {
+      if (item.createdAt) {
+        return new Date(item.createdAt).getTime() >= thirtyDaysAgo;
+      }
+      if (item.date) {
+        return new Date(item.date).getTime() >= thirtyDaysAgo;
+      }
+      return true;
+    });
+  };
 
   useEffect(() => {
     fetchMarketAnalysis();
@@ -99,19 +56,6 @@ const MarketAnalysisPage = ({ onOpenPortal }) => {
     };
   }, []);
 
-  const filter30DaysRetention = (items) => {
-    const thirtyDaysAgoMs = Date.now() - 30 * 24 * 60 * 60 * 1000;
-    return (items || []).filter((item) => {
-      if (!item.date) return true;
-      const parts = item.date.split('-');
-      if (parts.length === 3) {
-        const itemDateMs = new Date(parts[0], parts[1] - 1, parts[2]).getTime();
-        return itemDateMs >= thirtyDaysAgoMs - 86400000;
-      }
-      return true;
-    });
-  };
-
   const fetchMarketAnalysis = async () => {
     setLoading(true);
     try {
@@ -120,14 +64,14 @@ const MarketAnalysisPage = ({ onOpenPortal }) => {
         headers: { 'Cache-Control': 'no-cache' },
       });
       const data = await res.json();
-      if (data?.success && Array.isArray(data.data) && data.data.length > 0) {
+      if (data?.success && Array.isArray(data.data)) {
         setAnalyses(filter30DaysRetention(data.data));
       } else {
-        setAnalyses(filter30DaysRetention(FALLBACK_ANALYSIS_DATA));
+        setAnalyses([]);
       }
     } catch (err) {
-      console.warn('API unavailable, using fallback market data:', err);
-      setAnalyses(filter30DaysRetention(FALLBACK_ANALYSIS_DATA));
+      console.warn('API unavailable:', err);
+      setAnalyses([]);
     } finally {
       setLoading(false);
       const now = new Date();
