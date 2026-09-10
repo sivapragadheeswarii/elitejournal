@@ -15,7 +15,7 @@ import {
   FileText,
   Sparkles,
 } from 'lucide-react';
-import logo from '../../assets/logo-emblem.png';
+import logo from '../../assets/logo.png';
 
 const PortalSplash = ({ isOpen, onClose, destinationUrl }) => {
   if (!isOpen) return null;
@@ -121,11 +121,11 @@ const PortalSplash = ({ isOpen, onClose, destinationUrl }) => {
               transition={{ duration: 0.5 }}
               className="relative flex items-center justify-center"
             >
-              <div className="h-20 sm:h-24 px-6 sm:px-8 rounded-2xl bg-[#0D1B15] border-2 border-[#F59E0B]/40 flex items-center justify-center shadow-2xl shadow-[#F59E0B]/20 relative">
+              <div className="h-24 sm:h-32 px-6 sm:px-8 rounded-2xl bg-[#0D1B15] border-2 border-[#F59E0B]/40 flex items-center justify-center shadow-2xl shadow-[#F59E0B]/20 relative">
                 <img
                   src={logo}
                   alt="EPTS Logo"
-                  className="h-12 sm:h-16 w-auto object-contain"
+                  className="h-16 sm:h-20 w-auto object-contain"
                 />
               </div>
             </motion.div>

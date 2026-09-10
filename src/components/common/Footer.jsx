@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ShieldAlert, Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
 import { BRAND, COURSES } from '../../data/emaData';
-import logo from '../../assets/logo-emblem.png';
+import logo from '../../assets/logo.png';
 
 const Footer = () => {
   return (
@@ -15,8 +15,8 @@ const Footer = () => {
           {/* Brand Info (Cols 1-2) */}
           <div className="lg:col-span-2 flex flex-col gap-4">
             <div className="flex items-center gap-3">
-              <div className="h-11 sm:h-12 px-2.5 rounded-xl sm:rounded-2xl bg-[#0D1B15] border border-[#1F3A2E] flex items-center justify-center shrink-0 shadow-sm">
-                <img src={logo} alt="Elite Market Academy Logo" className="h-7 sm:h-8 w-auto object-contain" />
+              <div className="h-12 sm:h-14 px-2.5 sm:px-3 rounded-xl sm:rounded-2xl bg-[#0D1B15] border border-[#1F3A2E] flex items-center justify-center shrink-0 shadow-sm">
+                <img src={logo} alt="Elite Market Academy Logo" className="h-8 sm:h-10 w-auto object-contain" />
               </div>
               <div className="flex flex-col">
                 <span className="text-base sm:text-lg font-extrabold text-white font-heading tracking-tight">

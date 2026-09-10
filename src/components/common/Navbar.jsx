@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ShieldCheck, Menu, X, ChevronRight, MessageSquare, Sparkles, LogIn } from 'lucide-react';
 import { BRAND } from '../../data/emaData';
-import logo from '../../assets/logo-emblem.png';
+import logo from '../../assets/logo.png';
 import { trackContact } from '../../utils/metaPixel';
 
 const Navbar = ({ onOpenEnquiry, onOpenPortal }) => {
@@ -91,8 +91,8 @@ const Navbar = ({ onOpenEnquiry, onOpenPortal }) => {
           
           {/* Brand Logo */}
           <button onClick={() => handleNavClick('home')} className="flex items-center gap-2.5 sm:gap-3.5 group shrink-0 text-left cursor-pointer min-w-0">
-            <div className="h-10 sm:h-13 px-2 sm:px-2.5 rounded-xl sm:rounded-2xl bg-[#0D1B15] border border-[#1F3A2E] flex items-center justify-center shadow-sm group-hover:scale-105 group-hover:border-[#F59E0B]/50 transition-all shrink-0">
-              <img src={logo} alt="Elite Market Academy Logo" className="h-7 sm:h-9 w-auto object-contain" />
+            <div className="h-11 sm:h-14 px-2.5 sm:px-3 rounded-xl sm:rounded-2xl bg-[#0D1B15] border border-[#1F3A2E] flex items-center justify-center shadow-sm group-hover:scale-105 group-hover:border-[#F59E0B]/50 transition-all shrink-0">
+              <img src={logo} alt="Elite Market Academy Logo" className="h-8 sm:h-11 w-auto object-contain" />
             </div>
             <div className="flex flex-col text-left min-w-0">
               <span className="text-xs xs:text-sm sm:text-lg font-extrabold text-white tracking-tight font-heading leading-tight truncate">
