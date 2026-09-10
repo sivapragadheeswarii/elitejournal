@@ -78,9 +78,7 @@ const PortalSplash = ({ isOpen, onClose, destinationUrl }) => {
         {/* Top Header Overlay */}
         <div className="relative z-10 max-w-5xl mx-auto w-full flex items-center justify-between gap-4 pb-4 border-b border-[#1F3A2E]">
           <div className="flex items-center gap-3">
-            <div className="h-10 sm:h-11 px-2.5 rounded-xl bg-[#0D1B15] border border-[#1F3A2E] flex items-center justify-center shrink-0 shadow-md">
-              <img src={logo} alt="EMA Logo" className="h-6 sm:h-7 w-auto object-contain" />
-            </div>
+            <img src={logo} alt="EMA Logo" className="h-8 sm:h-9 w-auto object-contain shrink-0" />
             <div className="flex flex-col text-left">
               <span className="text-xs sm:text-sm font-extrabold text-white font-heading tracking-tight">
                 EPTS TRADING JOURNAL
@@ -121,13 +119,11 @@ const PortalSplash = ({ isOpen, onClose, destinationUrl }) => {
               transition={{ duration: 0.5 }}
               className="relative flex items-center justify-center"
             >
-              <div className="h-24 sm:h-32 px-6 sm:px-8 rounded-2xl bg-[#0D1B15] border-2 border-[#F59E0B]/40 flex items-center justify-center shadow-2xl shadow-[#F59E0B]/20 relative">
-                <img
-                  src={logo}
-                  alt="EPTS Logo"
-                  className="h-16 sm:h-20 w-auto object-contain"
-                />
-              </div>
+              <img
+                src={logo}
+                alt="EPTS Logo"
+                className="h-24 sm:h-36 w-auto object-contain drop-shadow-[0_12px_36px_rgba(245,158,11,0.25)] relative z-10"
+              />
             </motion.div>
 
             <motion.div
