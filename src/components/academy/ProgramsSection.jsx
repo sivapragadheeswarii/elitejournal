@@ -150,7 +150,7 @@ const ProgramsSection = ({ onOpenDemo }) => {
                       : 'bg-[#07110D] hover:bg-[#F59E0B] text-[#F59E0B] hover:text-slate-950 border-[#1F3A2E] hover:border-[#F59E0B]'
                   }`}
                 >
-                  <span>Select {course.title} & Book Demo</span>
+                  <span>Select {course.title} & Register</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
 
@@ -170,14 +170,14 @@ const ProgramsSection = ({ onOpenDemo }) => {
               Not sure which level suits your experience?
             </h4>
             <p className="text-xs sm:text-sm text-[#94A3B8] leading-relaxed">
-              Attend our Free Demo Class. Our mentor will evaluate your background, trading experience, and learning goals to recommend the right level for you.
+              Connect with our mentor to evaluate your background, trading experience, and learning goals to recommend the right level for you.
             </p>
           </div>
           <button
             onClick={() => handleSelectLevel('Beginner')}
             className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#F59E0B] to-[#D4AF37] hover:brightness-110 text-slate-950 font-extrabold text-xs sm:text-sm flex items-center gap-2 shadow-lg cursor-pointer active:scale-95 shrink-0 btn-shimmer"
           >
-            <span>Attend Free Demo Class</span>
+            <span>Register Now</span>
             <ArrowRight className="w-4 h-4" />
           </button>
         </div>

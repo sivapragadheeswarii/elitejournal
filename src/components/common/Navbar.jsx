@@ -123,7 +123,7 @@ const Navbar = ({ onOpenEnquiry, onOpenPortal }) => {
               className="px-4 py-2.5 rounded-xl bg-gradient-to-r from-[#F59E0B] via-[#D4AF37] to-[#F59E0B] hover:brightness-110 text-slate-950 font-extrabold text-xs transition-all shadow-md shadow-[#F59E0B]/20 active:scale-95 flex items-center gap-1.5 cursor-pointer whitespace-nowrap"
             >
               <Sparkles className="w-3.5 h-3.5 text-slate-950" />
-              <span>Book Free Demo</span>
+              <span>Register Now</span>
             </button>
 
             <button
@@ -191,7 +191,7 @@ const Navbar = ({ onOpenEnquiry, onOpenPortal }) => {
                 className="w-full py-3 rounded-xl bg-gradient-to-r from-[#F59E0B] to-[#D4AF37] text-slate-950 font-extrabold text-xs flex items-center justify-center gap-2 shadow-md cursor-pointer"
               >
                 <Sparkles className="w-4 h-4 text-slate-950" />
-                <span>Book Free Demo Class</span>
+                <span>Register Now</span>
               </button>
 
               <button

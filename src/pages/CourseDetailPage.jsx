@@ -149,7 +149,7 @@ const CourseDetailPage = ({ onOpenEnquiry }) => {
               className="px-7 py-3.5 rounded-xl bg-gradient-to-r from-[#F59E0B] via-[#D4AF37] to-[#F59E0B] hover:brightness-110 text-slate-950 font-extrabold text-xs flex items-center justify-center gap-2 shadow-lg shadow-[#F59E0B]/20 cursor-pointer active:scale-95"
             >
               <Sparkles className="w-4 h-4" />
-              <span>Book Free Demo Class</span>
+              <span>Register Now</span>
             </button>
             <button
               onClick={handleWhatsApp}
@@ -247,7 +247,7 @@ const CourseDetailPage = ({ onOpenEnquiry }) => {
                 className="px-8 py-4 rounded-xl bg-gradient-to-r from-[#F59E0B] via-[#D4AF37] to-[#F59E0B] hover:brightness-110 text-slate-950 font-extrabold text-xs sm:text-sm shadow-lg shadow-[#F59E0B]/20 transition-all active:scale-95 flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Sparkles className="w-4 h-4" />
-                <span>Book Free Demo Class</span>
+                <span>Register Now</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
 

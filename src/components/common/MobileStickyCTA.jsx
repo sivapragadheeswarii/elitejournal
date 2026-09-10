@@ -28,7 +28,7 @@ const MobileStickyCTA = ({ onOpenDemo }) => {
           className="py-3 px-3 rounded-xl min-h-[44px] bg-gradient-to-r from-[#F59E0B] via-[#D4AF37] to-[#F59E0B] text-slate-950 font-extrabold text-xs flex items-center justify-center gap-1.5 shadow-md active:scale-95 transition-all cursor-pointer btn-shimmer animate-breathing-glow"
         >
           <Sparkles className="w-3.5 h-3.5 text-slate-950 animate-pulse" />
-          <span>Free Demo</span>
+          <span>Register</span>
         </button>
 
         <button

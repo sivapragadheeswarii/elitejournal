@@ -217,7 +217,7 @@ const FreeDemoSection = () => {
                     ) : (
                       <>
                         <Send className="w-4 h-4 text-slate-950" />
-                        <span>Book My Free Demo</span>
+                        <span>Register Now</span>
                       </>
                     )}
                   </button>

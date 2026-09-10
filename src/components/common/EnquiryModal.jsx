@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { X, Send, CheckCircle2, ShieldCheck } from 'lucide-react';
-import { COURSES } from '../../data/emaData';
 import { trackLead } from '../../utils/metaPixel';
+
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
 const EnquiryModal = ({ isOpen, onClose }) => {
   const [submitted, setSubmitted] = useState(false);
@@ -11,8 +12,6 @@ const EnquiryModal = ({ isOpen, onClose }) => {
     fullName: '',
     mobileNumber: '',
     email: '',
-    tradingExperience: 'Beginner (0-6 months)',
-    interestedCourse: 'Beginner Level',
     preferredContact: 'WhatsApp',
     message: '',
   });
@@ -24,7 +23,7 @@ const EnquiryModal = ({ isOpen, onClose }) => {
     setLoading(true);
     setErrorMsg('');
     try {
-      const response = await fetch('http://localhost:5000/api/contact', {
+      const response = await fetch(`${API_BASE}/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -33,15 +32,14 @@ const EnquiryModal = ({ isOpen, onClose }) => {
       if (data.success) {
         setSubmitted(true);
         trackLead({
-          content_name: 'Request Course Information Modal',
-          interested_course: formData.interestedCourse,
+          content_name: 'Course Registration Modal',
         });
       } else {
-        setErrorMsg(data.message || 'Failed to send enquiry.');
+        setErrorMsg(data.message || 'Failed to submit registration.');
       }
     } catch (err) {
       console.error(err);
-      setErrorMsg('Failed to send enquiry. Please try again later.');
+      setErrorMsg('Failed to submit registration. Please try again later.');
     } finally {
       setLoading(false);
     }
@@ -57,7 +55,7 @@ const EnquiryModal = ({ isOpen, onClose }) => {
             <span className="text-[10px] sm:text-xs font-bold text-[#F59E0B] uppercase tracking-widest">
               Elite Market Academy
             </span>
-            <h3 className="text-base sm:text-lg font-black font-heading">Request Course Information</h3>
+            <h3 className="text-base sm:text-lg font-black font-heading">Course Registration</h3>
           </div>
           <button
             onClick={onClose}
@@ -74,9 +72,9 @@ const EnquiryModal = ({ isOpen, onClose }) => {
               <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center">
                 <CheckCircle2 className="w-10 h-10" />
               </div>
-              <h4 className="text-xl font-black text-[#0D1B15]">Thank You!</h4>
+              <h4 className="text-xl font-black text-[#0D1B15]">Registration Successful!</h4>
               <p className="text-sm text-slate-600 font-medium max-w-md">
-                Our team will contact you with the requested course information shortly.
+                Thank you for registering. Our team will contact you shortly with the onboarding details.
               </p>
               <button
                 onClick={() => {
@@ -131,34 +129,6 @@ const EnquiryModal = ({ isOpen, onClose }) => {
                 </div>
 
                 <div className="flex flex-col gap-1">
-                  <label className="text-xs font-bold text-slate-700">Interested Level</label>
-                  <select
-                    value={formData.interestedCourse}
-                    onChange={(e) => setFormData({ ...formData, interestedCourse: e.target.value })}
-                    className="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2 text-xs font-medium text-slate-900 focus:ring-2 focus:ring-[#0D1B15] outline-none"
-                  >
-                    {COURSES.map((c) => (
-                      <option key={c.id} value={`${c.title} Level`}>{c.title} Level</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="flex flex-col gap-1">
-                  <label className="text-xs font-bold text-slate-700">Trading Experience</label>
-                  <select
-                    value={formData.tradingExperience}
-                    onChange={(e) => setFormData({ ...formData, tradingExperience: e.target.value })}
-                    className="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2 text-xs font-medium text-slate-900 focus:ring-2 focus:ring-[#0D1B15] outline-none"
-                  >
-                    <option value="Beginner (0-6 months)">Beginner (0-6 months)</option>
-                    <option value="Intermediate (6-2 years)">Intermediate (6-2 years)</option>
-                    <option value="Experienced (2+ years)">Experienced (2+ years)</option>
-                  </select>
-                </div>
-
-                <div className="flex flex-col gap-1">
                   <label className="text-xs font-bold text-slate-700">Preferred Contact Method</label>
                   <select
                     value={formData.preferredContact}
@@ -200,7 +170,7 @@ const EnquiryModal = ({ isOpen, onClose }) => {
                   disabled={loading}
                   className={`px-6 py-3 rounded-xl bg-[#0D1B15] hover:bg-[#12261E] text-amber-400 font-black text-xs transition-all shadow-md flex items-center gap-2 cursor-pointer border border-amber-500/30 ${loading ? 'opacity-70 cursor-not-allowed' : ''}`}
                 >
-                  <span>{loading ? 'Sending...' : 'Submit Request'}</span>
+                  <span>{loading ? 'Registering...' : 'Register Now'}</span>
                   <Send className="w-3.5 h-3.5" />
                 </button>
               </div>
