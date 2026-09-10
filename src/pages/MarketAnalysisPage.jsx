@@ -90,6 +90,13 @@ const MarketAnalysisPage = ({ onOpenPortal }) => {
 
   useEffect(() => {
     fetchMarketAnalysis();
+
+    const handleFocus = () => fetchMarketAnalysis();
+    window.addEventListener('focus', handleFocus);
+
+    return () => {
+      window.removeEventListener('focus', handleFocus);
+    };
   }, []);
 
   const filter30DaysRetention = (items) => {
@@ -108,7 +115,10 @@ const MarketAnalysisPage = ({ onOpenPortal }) => {
   const fetchMarketAnalysis = async () => {
     setLoading(true);
     try {
-      const res = await fetch(`${API_BASE}/market-analysis/public`);
+      const res = await fetch(`${API_BASE}/market-analysis/public?_t=${Date.now()}`, {
+        cache: 'no-store',
+        headers: { 'Cache-Control': 'no-cache' },
+      });
       const data = await res.json();
       if (data?.success && Array.isArray(data.data) && data.data.length > 0) {
         setAnalyses(filter30DaysRetention(data.data));

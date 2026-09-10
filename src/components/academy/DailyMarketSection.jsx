@@ -63,7 +63,10 @@ const DailyMarketSection = () => {
   const fetchPublicAnalyses = async () => {
     setLoading(true);
     try {
-      const res = await fetch(`${API_BASE}/market-analysis/public`);
+      const res = await fetch(`${API_BASE}/market-analysis/public?_t=${Date.now()}`, {
+        cache: 'no-store',
+        headers: { 'Cache-Control': 'no-cache' },
+      });
       const data = await res.json();
       if (data?.success && Array.isArray(data.data) && data.data.length > 0) {
         setAnalyses(data.data);
@@ -89,6 +92,18 @@ const DailyMarketSection = () => {
 
   useEffect(() => {
     fetchPublicAnalyses();
+
+    // Re-fetch automatically when window/tab is focused (e.g. switching back from Admin Dashboard)
+    const handleFocus = () => fetchPublicAnalyses();
+    window.addEventListener('focus', handleFocus);
+
+    // Auto-sync every 60 seconds
+    const interval = setInterval(fetchPublicAnalyses, 60000);
+
+    return () => {
+      window.removeEventListener('focus', handleFocus);
+      clearInterval(interval);
+    };
   }, []);
 
   // Distinct markets list
