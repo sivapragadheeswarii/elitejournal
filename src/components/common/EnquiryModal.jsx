@@ -12,7 +12,6 @@ const EnquiryModal = ({ isOpen, onClose }) => {
     fullName: '',
     mobileNumber: '',
     email: '',
-    preferredContact: 'WhatsApp',
     message: '',
   });
 
@@ -115,31 +114,16 @@ const EnquiryModal = ({ isOpen, onClose }) => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="flex flex-col gap-1">
-                  <label className="text-xs font-bold text-slate-700">Email Address *</label>
-                  <input
-                    type="email"
-                    required
-                    placeholder="name@example.com"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2 text-xs font-medium text-slate-900 focus:ring-2 focus:ring-[#0D1B15] outline-none"
-                  />
-                </div>
-
-                <div className="flex flex-col gap-1">
-                  <label className="text-xs font-bold text-slate-700">Preferred Contact Method</label>
-                  <select
-                    value={formData.preferredContact}
-                    onChange={(e) => setFormData({ ...formData, preferredContact: e.target.value })}
-                    className="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2 text-xs font-medium text-slate-900 focus:ring-2 focus:ring-[#0D1B15] outline-none"
-                  >
-                    <option value="WhatsApp">WhatsApp</option>
-                    <option value="Phone Call">Phone Call</option>
-                    <option value="Email">Email</option>
-                  </select>
-                </div>
+              <div className="flex flex-col gap-1">
+                <label className="text-xs font-bold text-slate-700">Email Address *</label>
+                <input
+                  type="email"
+                  required
+                  placeholder="name@example.com"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  className="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2 text-xs font-medium text-slate-900 focus:ring-2 focus:ring-[#0D1B15] outline-none"
+                />
               </div>
 
               <div className="flex flex-col gap-1">
